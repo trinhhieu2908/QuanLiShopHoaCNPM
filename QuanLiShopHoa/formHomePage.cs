@@ -98,7 +98,7 @@ namespace QuanLiShopHoa
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-
+        //code
         private void btnTaoDonHang_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color1);
