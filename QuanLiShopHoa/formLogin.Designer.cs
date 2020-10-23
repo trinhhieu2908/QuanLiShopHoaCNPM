@@ -148,8 +148,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(525, 943);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.TabStop = false;            
             // 
             // formLogin
             // 

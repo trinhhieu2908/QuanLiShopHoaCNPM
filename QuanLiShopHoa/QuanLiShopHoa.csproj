@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\userloginClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

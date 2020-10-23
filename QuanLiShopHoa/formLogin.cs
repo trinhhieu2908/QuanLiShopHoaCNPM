@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiShopHoa.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,8 @@ namespace QuanLiShopHoa
             InitializeComponent();
         }
 
+
+        //Code for design
         private void txbTenDangNhap_Click(object sender, EventArgs e)
         {            
             picTenDangNhap.BackgroundImage = Properties.Resources.userloginClick;
@@ -49,6 +52,7 @@ namespace QuanLiShopHoa
         {
             txbMatKhau.Clear();
         }
+        //end code for design
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -62,11 +66,30 @@ namespace QuanLiShopHoa
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            formHomePage f = new formHomePage();
-            this.Hide();
-            f.ShowDialog();
+            string tenDangNhap = txbTenDangNhap.Text;
+            string matKhau = txbMatKhau.Text;
+            if (DangNhap(tenDangNhap, matKhau))
+            {
+                formHomePage f = new formHomePage();
+                this.Hide();
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+            }
+                       
         }
 
+        bool DangNhap(string tenDangNhap, string matKhau)
+        {
+            return AccountDAO.Instance.DangNhap(tenDangNhap, matKhau);
+        }
+
+
+
+
+        //move
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -76,11 +99,6 @@ namespace QuanLiShopHoa
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }

@@ -28,7 +28,8 @@ namespace QuanLiShopHoa
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;           
+            
         }
 
         private void openChildForm(Form childForm)
@@ -103,36 +104,44 @@ namespace QuanLiShopHoa
         {
             activateButton(sender, RGBColors.color1);
             openChildForm(new formTaoDonHang());
+            panelShadow.BackColor = RGBColors.color1;
         }
 
         private void btnQuanLiDonHang_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color2);
             openChildForm(new formQuanLiDonHang());
+            panelShadow.BackColor = RGBColors.color2;
         }
 
         private void btnQuanLiKho_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color3);
             openChildForm(new formQuanLiKho());
+            panelShadow.BackColor = RGBColors.color3;
         }
 
         private void btnQuanLiNhanVien_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color4);
             openChildForm(new formQuanLiNhanVien());
+            panelShadow.BackColor = RGBColors.color4;
         }
 
         private void btnQuanLiDoanhThu_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color5);
             openChildForm(new formQuanLiDoanhThu());
+            panelShadow.BackColor = RGBColors.color5;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
-            reset();
+            if(currentChildForm != null)
+            {
+                currentChildForm.Close();
+                reset();
+            }
         }
 
         private void reset()
@@ -143,6 +152,7 @@ namespace QuanLiShopHoa
             iconCurrentChildForm.IconColor = Color.HotPink;
             labelTitleChildForm.Text = "Home";
             labelTitleChildForm.ForeColor = Color.Gainsboro;
+            panelShadow.BackColor = Color.FromArgb(33, 31, 33);
         }
 
         //Drag form
