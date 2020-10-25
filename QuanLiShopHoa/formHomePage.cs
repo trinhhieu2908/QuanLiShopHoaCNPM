@@ -9,18 +9,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using QuanLiShopHoa.DTO;
 
 namespace QuanLiShopHoa
 {
     public partial class formHomePage : Form
     {
+        private Account loginAccount;
+        public Account LoginAccount1 {
+            get { return loginAccount; }
+            set { loginAccount = value; }
+        }
+        
+        
         //Fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public formHomePage()
+
+        
+
+        public formHomePage(Account acc)
         {
-            InitializeComponent();
+            InitializeComponent();            
+
+            this.loginAccount = acc;
+
+            ChangeAccount(acc.LoaiTaiKhoan, acc.HoTen);
+
+            //left border button
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 72);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -32,6 +49,19 @@ namespace QuanLiShopHoa
             
         }
 
+        #region Method
+
+        void ChangeAccount(int loaiTaiKhoan, string hoTen)
+        {
+            btnQuanLiKho.Enabled = loaiTaiKhoan == 1;
+            btnQuanLiNhanVien.Enabled = loaiTaiKhoan == 1;
+            btnQuanLiDoanhThu.Enabled = loaiTaiKhoan == 1;
+            lbHoTen.Text = hoTen;
+        }
+
+        #endregion
+
+        #region Design
         private void openChildForm(Form childForm)
         {
             if(currentChildForm != null)
@@ -98,8 +128,34 @@ namespace QuanLiShopHoa
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
+        }       
+
+        private void reset()
+        {
+            disableButton();
+            leftBorderBtn.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.HotPink;
+            labelTitleChildForm.Text = "Home";
+            labelTitleChildForm.ForeColor = Color.Gainsboro;
+            panelShadow.BackColor = Color.FromArgb(33, 31, 33);
         }
-        //code
+
+        //Drag form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMgs, int wParam, int lParam);
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
+
+        #region events
+
         private void btnTaoDonHang_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color1);
@@ -137,35 +193,12 @@ namespace QuanLiShopHoa
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            if(currentChildForm != null)
+            if (currentChildForm != null)
             {
                 currentChildForm.Close();
                 reset();
             }
-        }
-
-        private void reset()
-        {
-            disableButton();
-            leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.HotPink;
-            labelTitleChildForm.Text = "Home";
-            labelTitleChildForm.ForeColor = Color.Gainsboro;
-            panelShadow.BackColor = Color.FromArgb(33, 31, 33);
-        }
-
-        //Drag form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMgs, int wParam, int lParam);
-
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }            
+        }       
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -188,5 +221,17 @@ namespace QuanLiShopHoa
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formLogin f = new formLogin();
+            f.Show();
+        }
+        #endregion
+
+
+
+
     }
 }

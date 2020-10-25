@@ -1,4 +1,5 @@
 ﻿using QuanLiShopHoa.DAO;
+using QuanLiShopHoa.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace QuanLiShopHoa
         }
 
 
-        //Code for design
+        #region events
         private void txbTenDangNhap_Click(object sender, EventArgs e)
         {            
             picTenDangNhap.BackgroundImage = Properties.Resources.userloginClick;
@@ -46,22 +47,12 @@ namespace QuanLiShopHoa
         private void txbTenDangNhap_DoubleClick(object sender, EventArgs e)
         {
             txbTenDangNhap.Clear();
-        }
-
-        private void txbMatKhau_DoubleClick(object sender, EventArgs e)
-        {
             txbMatKhau.Clear();
-        }
-        //end code for design
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -70,7 +61,8 @@ namespace QuanLiShopHoa
             string matKhau = txbMatKhau.Text;
             if (DangNhap(tenDangNhap, matKhau))
             {
-                formHomePage f = new formHomePage();
+                Account loginAccount = AccountDAO.Instance.GetAccountByTenDangNhap(tenDangNhap);
+                formHomePage f = new formHomePage(loginAccount);
                 this.Hide();
                 f.ShowDialog();
             }
@@ -78,17 +70,25 @@ namespace QuanLiShopHoa
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
             }
-                       
+
         }
+
+        #endregion
+
+        #region method
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }        
 
         bool DangNhap(string tenDangNhap, string matKhau)
         {
             return AccountDAO.Instance.DangNhap(tenDangNhap, matKhau);
         }
 
+        #endregion
 
-
-
+        #region design
         //move
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -99,6 +99,12 @@ namespace QuanLiShopHoa
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }        
+        }
+        #endregion
+
+        private void txbTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

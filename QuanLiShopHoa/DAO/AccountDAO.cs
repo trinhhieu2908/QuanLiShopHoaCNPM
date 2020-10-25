@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiShopHoa.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -21,14 +22,40 @@ namespace QuanLiShopHoa.DAO
 
         public bool DangNhap(string tenDangNhap, string matKhau)
         {
-            string x = " select * from dbo.Account where tenDangNhap = N'";
-            string y = "' and MatKhau = N'";
-            string z = "'";
-            string query = x + tenDangNhap + y + matKhau + z;
+            string query = "USP_Login @tenDangNhap , @MatKhau";
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {tenDangNhap, matKhau});
 
             return result.Rows.Count > 0;
+        }
+
+        public Account GetAccountByTenDangNhap(string tenDangNhap)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Account where tenDangNhap = '" + tenDangNhap + "'");
+
+            foreach(DataRow item in data.Rows)
+            {
+                return new Account(item);
+            }
+
+            return null;
+        }
+
+        public List<Account> GetListAccount()
+        {
+            List<Account> list = new List<Account>();
+
+            string query = "select * from Account";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach(DataRow item in data.Rows)
+            {
+                Account acc = new Account(item);
+                list.Add(acc);
+            }
+
+            return list;
         }
     }
 }

@@ -54,8 +54,9 @@
             this.txbTenDangNhap.Name = "txbTenDangNhap";
             this.txbTenDangNhap.Size = new System.Drawing.Size(382, 38);
             this.txbTenDangNhap.TabIndex = 1;
-            this.txbTenDangNhap.Text = "Tên đăng nhập";
+            this.txbTenDangNhap.Text = "QuanLiCuaHang";
             this.txbTenDangNhap.Click += new System.EventHandler(this.txbTenDangNhap_Click);
+            this.txbTenDangNhap.TextChanged += new System.EventHandler(this.txbTenDangNhap_TextChanged);
             this.txbTenDangNhap.DoubleClick += new System.EventHandler(this.txbTenDangNhap_DoubleClick);
             // 
             // panel1
@@ -84,9 +85,8 @@
             this.txbMatKhau.Name = "txbMatKhau";
             this.txbMatKhau.Size = new System.Drawing.Size(382, 38);
             this.txbMatKhau.TabIndex = 4;
-            this.txbMatKhau.Text = "Mật khẩu";
+            this.txbMatKhau.Text = "123456";
             this.txbMatKhau.Click += new System.EventHandler(this.txbMatKhau_Click);
-            this.txbMatKhau.DoubleClick += new System.EventHandler(this.txbMatKhau_DoubleClick);
             // 
             // btnDangNhap
             // 
@@ -148,7 +148,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(525, 943);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;            
+            this.pictureBox1.TabStop = false;
             // 
             // formLogin
             // 

@@ -16,5 +16,15 @@ namespace QuanLiShopHoa
         {
             InitializeComponent();
         }
+
+        private void txbTenSanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formQuanLiKho_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

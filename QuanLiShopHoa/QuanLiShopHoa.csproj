@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\Account.cs" />
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,7 +154,22 @@
     <None Include="Resources\userloginClick.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DTO\" />
+    <None Include="Resources\buttonSuaNV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSuaNVhover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonThemNV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonThemNVhover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonXoaNV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonXoaNVhover.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
