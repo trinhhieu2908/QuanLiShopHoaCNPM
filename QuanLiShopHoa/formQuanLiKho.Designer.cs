@@ -32,66 +32,66 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dtgvAccount = new System.Windows.Forms.DataGridView();
+            this.dtgvProduct = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconDiaChi = new FontAwesome.Sharp.IconPictureBox();
-            this.panelDiaChi = new System.Windows.Forms.Panel();
+            this.iconMua = new FontAwesome.Sharp.IconPictureBox();
+            this.panelMua = new System.Windows.Forms.Panel();
             this.txbMua = new System.Windows.Forms.TextBox();
-            this.iconSoDienThoai = new FontAwesome.Sharp.IconPictureBox();
-            this.panelSoDienThoai = new System.Windows.Forms.Panel();
+            this.iconLoaiSanPham = new FontAwesome.Sharp.IconPictureBox();
+            this.panelLoaiSanPham = new System.Windows.Forms.Panel();
             this.txbLoaiSanPham = new System.Windows.Forms.TextBox();
-            this.iconHoTen = new FontAwesome.Sharp.IconPictureBox();
-            this.panelHoTen = new System.Windows.Forms.Panel();
+            this.iconSoLuong = new FontAwesome.Sharp.IconPictureBox();
+            this.panelSoLuong = new System.Windows.Forms.Panel();
             this.txbSoLuong = new System.Windows.Forms.TextBox();
-            this.iconMatKhau = new FontAwesome.Sharp.IconPictureBox();
-            this.panelMatKhau = new System.Windows.Forms.Panel();
+            this.iconDonGia = new FontAwesome.Sharp.IconPictureBox();
+            this.panelDonGia = new System.Windows.Forms.Panel();
             this.txbDonGia = new System.Windows.Forms.TextBox();
             this.iconTenSanPham = new FontAwesome.Sharp.IconPictureBox();
             this.panelTenSanPham = new System.Windows.Forms.Panel();
             this.txbTenSanPham = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelTimSanPham = new System.Windows.Forms.Panel();
             this.txbTimSanPham = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSuaNV = new System.Windows.Forms.PictureBox();
-            this.btnThemNV = new System.Windows.Forms.PictureBox();
-            this.btnXoaNV = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
+            this.btnTTNX = new System.Windows.Forms.PictureBox();
+            this.btnXuat = new System.Windows.Forms.PictureBox();
+            this.btnNhap = new System.Windows.Forms.PictureBox();
+            this.btnSuaSP = new System.Windows.Forms.PictureBox();
+            this.btnThemSP = new System.Windows.Forms.PictureBox();
+            this.btnXoaSP = new System.Windows.Forms.PictureBox();
+            this.iconTimSanPham = new FontAwesome.Sharp.IconPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconDiaChi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSoDienThoai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconHoTen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMatKhau)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconLoaiSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSoLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconDonGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconTenSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSuaNV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemNV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoaNV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTTNX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSuaSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnThemSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoaSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTimSanPham)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtgvAccount
+            // dtgvProduct
             // 
-            this.dtgvAccount.AllowUserToAddRows = false;
-            this.dtgvAccount.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
+            this.dtgvProduct.AllowUserToAddRows = false;
+            this.dtgvProduct.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgvAccount.BackgroundColor = System.Drawing.Color.White;
-            this.dtgvAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dtgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.dtgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,20 +100,20 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvAccount.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.dtgvAccount.Location = new System.Drawing.Point(22, 73);
-            this.dtgvAccount.Name = "dtgvAccount";
-            this.dtgvAccount.ReadOnly = true;
+            this.dtgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.dtgvProduct.Location = new System.Drawing.Point(22, 73);
+            this.dtgvProduct.Name = "dtgvProduct";
+            this.dtgvProduct.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,19 +121,19 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvAccount.RowHeadersVisible = false;
-            this.dtgvAccount.RowHeadersWidth = 51;
-            this.dtgvAccount.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
-            this.dtgvAccount.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgvAccount.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
-            this.dtgvAccount.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvAccount.RowTemplate.DividerHeight = 5;
-            this.dtgvAccount.RowTemplate.Height = 50;
-            this.dtgvAccount.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvAccount.Size = new System.Drawing.Size(942, 791);
-            this.dtgvAccount.TabIndex = 1;
+            this.dtgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvProduct.RowHeadersVisible = false;
+            this.dtgvProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dtgvProduct.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
+            this.dtgvProduct.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgvProduct.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
+            this.dtgvProduct.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvProduct.RowTemplate.DividerHeight = 5;
+            this.dtgvProduct.RowTemplate.Height = 50;
+            this.dtgvProduct.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvProduct.Size = new System.Drawing.Size(942, 791);
+            this.dtgvProduct.TabIndex = 1;
             // 
             // panel1
             // 
@@ -141,17 +141,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.iconDiaChi);
-            this.panel1.Controls.Add(this.panelDiaChi);
+            this.panel1.Controls.Add(this.iconMua);
+            this.panel1.Controls.Add(this.panelMua);
             this.panel1.Controls.Add(this.txbMua);
-            this.panel1.Controls.Add(this.iconSoDienThoai);
-            this.panel1.Controls.Add(this.panelSoDienThoai);
+            this.panel1.Controls.Add(this.iconLoaiSanPham);
+            this.panel1.Controls.Add(this.panelLoaiSanPham);
             this.panel1.Controls.Add(this.txbLoaiSanPham);
-            this.panel1.Controls.Add(this.iconHoTen);
-            this.panel1.Controls.Add(this.panelHoTen);
+            this.panel1.Controls.Add(this.iconSoLuong);
+            this.panel1.Controls.Add(this.panelSoLuong);
             this.panel1.Controls.Add(this.txbSoLuong);
-            this.panel1.Controls.Add(this.iconMatKhau);
-            this.panel1.Controls.Add(this.panelMatKhau);
+            this.panel1.Controls.Add(this.iconDonGia);
+            this.panel1.Controls.Add(this.panelDonGia);
             this.panel1.Controls.Add(this.txbDonGia);
             this.panel1.Controls.Add(this.iconTenSanPham);
             this.panel1.Controls.Add(this.panelTenSanPham);
@@ -161,26 +161,26 @@
             this.panel1.Size = new System.Drawing.Size(450, 478);
             this.panel1.TabIndex = 2;
             // 
-            // iconDiaChi
+            // iconMua
             // 
-            this.iconDiaChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.iconDiaChi.IconChar = FontAwesome.Sharp.IconChar.Cloud;
-            this.iconDiaChi.IconColor = System.Drawing.Color.White;
-            this.iconDiaChi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconDiaChi.IconSize = 34;
-            this.iconDiaChi.Location = new System.Drawing.Point(40, 352);
-            this.iconDiaChi.Name = "iconDiaChi";
-            this.iconDiaChi.Size = new System.Drawing.Size(34, 34);
-            this.iconDiaChi.TabIndex = 19;
-            this.iconDiaChi.TabStop = false;
+            this.iconMua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.iconMua.IconChar = FontAwesome.Sharp.IconChar.Cloud;
+            this.iconMua.IconColor = System.Drawing.Color.White;
+            this.iconMua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMua.IconSize = 34;
+            this.iconMua.Location = new System.Drawing.Point(40, 352);
+            this.iconMua.Name = "iconMua";
+            this.iconMua.Size = new System.Drawing.Size(34, 34);
+            this.iconMua.TabIndex = 19;
+            this.iconMua.TabStop = false;
             // 
-            // panelDiaChi
+            // panelMua
             // 
-            this.panelDiaChi.BackColor = System.Drawing.Color.White;
-            this.panelDiaChi.Location = new System.Drawing.Point(40, 391);
-            this.panelDiaChi.Name = "panelDiaChi";
-            this.panelDiaChi.Size = new System.Drawing.Size(366, 2);
-            this.panelDiaChi.TabIndex = 18;
+            this.panelMua.BackColor = System.Drawing.Color.White;
+            this.panelMua.Location = new System.Drawing.Point(40, 391);
+            this.panelMua.Name = "panelMua";
+            this.panelMua.Size = new System.Drawing.Size(366, 2);
+            this.panelMua.TabIndex = 18;
             // 
             // txbMua
             // 
@@ -194,27 +194,28 @@
             this.txbMua.Size = new System.Drawing.Size(323, 34);
             this.txbMua.TabIndex = 17;
             this.txbMua.Text = "Mùa";
+            this.txbMua.DoubleClick += new System.EventHandler(this.txbMua_DoubleClick);
             // 
-            // iconSoDienThoai
+            // iconLoaiSanPham
             // 
-            this.iconSoDienThoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.iconSoDienThoai.IconChar = FontAwesome.Sharp.IconChar.Ring;
-            this.iconSoDienThoai.IconColor = System.Drawing.Color.White;
-            this.iconSoDienThoai.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconSoDienThoai.IconSize = 34;
-            this.iconSoDienThoai.Location = new System.Drawing.Point(40, 280);
-            this.iconSoDienThoai.Name = "iconSoDienThoai";
-            this.iconSoDienThoai.Size = new System.Drawing.Size(34, 34);
-            this.iconSoDienThoai.TabIndex = 16;
-            this.iconSoDienThoai.TabStop = false;
+            this.iconLoaiSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.iconLoaiSanPham.IconChar = FontAwesome.Sharp.IconChar.Ring;
+            this.iconLoaiSanPham.IconColor = System.Drawing.Color.White;
+            this.iconLoaiSanPham.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconLoaiSanPham.IconSize = 34;
+            this.iconLoaiSanPham.Location = new System.Drawing.Point(40, 280);
+            this.iconLoaiSanPham.Name = "iconLoaiSanPham";
+            this.iconLoaiSanPham.Size = new System.Drawing.Size(34, 34);
+            this.iconLoaiSanPham.TabIndex = 16;
+            this.iconLoaiSanPham.TabStop = false;
             // 
-            // panelSoDienThoai
+            // panelLoaiSanPham
             // 
-            this.panelSoDienThoai.BackColor = System.Drawing.Color.White;
-            this.panelSoDienThoai.Location = new System.Drawing.Point(40, 319);
-            this.panelSoDienThoai.Name = "panelSoDienThoai";
-            this.panelSoDienThoai.Size = new System.Drawing.Size(366, 2);
-            this.panelSoDienThoai.TabIndex = 15;
+            this.panelLoaiSanPham.BackColor = System.Drawing.Color.White;
+            this.panelLoaiSanPham.Location = new System.Drawing.Point(40, 319);
+            this.panelLoaiSanPham.Name = "panelLoaiSanPham";
+            this.panelLoaiSanPham.Size = new System.Drawing.Size(366, 2);
+            this.panelLoaiSanPham.TabIndex = 15;
             // 
             // txbLoaiSanPham
             // 
@@ -228,27 +229,28 @@
             this.txbLoaiSanPham.Size = new System.Drawing.Size(323, 34);
             this.txbLoaiSanPham.TabIndex = 14;
             this.txbLoaiSanPham.Text = "Loại Sản Phẩm";
+            this.txbLoaiSanPham.DoubleClick += new System.EventHandler(this.txbLoaiSanPham_DoubleClick);
             // 
-            // iconHoTen
+            // iconSoLuong
             // 
-            this.iconHoTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.iconHoTen.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
-            this.iconHoTen.IconColor = System.Drawing.Color.White;
-            this.iconHoTen.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconHoTen.IconSize = 34;
-            this.iconHoTen.Location = new System.Drawing.Point(40, 213);
-            this.iconHoTen.Name = "iconHoTen";
-            this.iconHoTen.Size = new System.Drawing.Size(34, 34);
-            this.iconHoTen.TabIndex = 13;
-            this.iconHoTen.TabStop = false;
+            this.iconSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.iconSoLuong.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.iconSoLuong.IconColor = System.Drawing.Color.White;
+            this.iconSoLuong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSoLuong.IconSize = 34;
+            this.iconSoLuong.Location = new System.Drawing.Point(40, 213);
+            this.iconSoLuong.Name = "iconSoLuong";
+            this.iconSoLuong.Size = new System.Drawing.Size(34, 34);
+            this.iconSoLuong.TabIndex = 13;
+            this.iconSoLuong.TabStop = false;
             // 
-            // panelHoTen
+            // panelSoLuong
             // 
-            this.panelHoTen.BackColor = System.Drawing.Color.White;
-            this.panelHoTen.Location = new System.Drawing.Point(40, 252);
-            this.panelHoTen.Name = "panelHoTen";
-            this.panelHoTen.Size = new System.Drawing.Size(366, 2);
-            this.panelHoTen.TabIndex = 12;
+            this.panelSoLuong.BackColor = System.Drawing.Color.White;
+            this.panelSoLuong.Location = new System.Drawing.Point(40, 252);
+            this.panelSoLuong.Name = "panelSoLuong";
+            this.panelSoLuong.Size = new System.Drawing.Size(366, 2);
+            this.panelSoLuong.TabIndex = 12;
             // 
             // txbSoLuong
             // 
@@ -262,27 +264,28 @@
             this.txbSoLuong.Size = new System.Drawing.Size(323, 34);
             this.txbSoLuong.TabIndex = 11;
             this.txbSoLuong.Text = "Số lượng";
+            this.txbSoLuong.DoubleClick += new System.EventHandler(this.txbSoLuong_DoubleClick);
             // 
-            // iconMatKhau
+            // iconDonGia
             // 
-            this.iconMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.iconMatKhau.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.iconMatKhau.IconColor = System.Drawing.Color.White;
-            this.iconMatKhau.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMatKhau.IconSize = 34;
-            this.iconMatKhau.Location = new System.Drawing.Point(40, 137);
-            this.iconMatKhau.Name = "iconMatKhau";
-            this.iconMatKhau.Size = new System.Drawing.Size(34, 34);
-            this.iconMatKhau.TabIndex = 10;
-            this.iconMatKhau.TabStop = false;
+            this.iconDonGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.iconDonGia.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.iconDonGia.IconColor = System.Drawing.Color.White;
+            this.iconDonGia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconDonGia.IconSize = 34;
+            this.iconDonGia.Location = new System.Drawing.Point(40, 137);
+            this.iconDonGia.Name = "iconDonGia";
+            this.iconDonGia.Size = new System.Drawing.Size(34, 34);
+            this.iconDonGia.TabIndex = 10;
+            this.iconDonGia.TabStop = false;
             // 
-            // panelMatKhau
+            // panelDonGia
             // 
-            this.panelMatKhau.BackColor = System.Drawing.Color.White;
-            this.panelMatKhau.Location = new System.Drawing.Point(40, 176);
-            this.panelMatKhau.Name = "panelMatKhau";
-            this.panelMatKhau.Size = new System.Drawing.Size(366, 2);
-            this.panelMatKhau.TabIndex = 9;
+            this.panelDonGia.BackColor = System.Drawing.Color.White;
+            this.panelDonGia.Location = new System.Drawing.Point(40, 176);
+            this.panelDonGia.Name = "panelDonGia";
+            this.panelDonGia.Size = new System.Drawing.Size(366, 2);
+            this.panelDonGia.TabIndex = 9;
             // 
             // txbDonGia
             // 
@@ -296,6 +299,7 @@
             this.txbDonGia.Size = new System.Drawing.Size(323, 34);
             this.txbDonGia.TabIndex = 8;
             this.txbDonGia.Text = "Đơn giá";
+            this.txbDonGia.DoubleClick += new System.EventHandler(this.txbDonGia_DoubleClick);
             // 
             // iconTenSanPham
             // 
@@ -330,30 +334,16 @@
             this.txbTenSanPham.Size = new System.Drawing.Size(323, 34);
             this.txbTenSanPham.TabIndex = 5;
             this.txbTenSanPham.Text = "Tên sản phẩm";
-            this.txbTenSanPham.Click += new System.EventHandler(this.txbTenSanPham_Click);
+            this.txbTenSanPham.DoubleClick += new System.EventHandler(this.txbTenSanPham_DoubleClick);
             // 
-            // iconPictureBox1
+            // panelTimSanPham
             // 
-            this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 40;
-            this.iconPictureBox1.Location = new System.Drawing.Point(928, 23);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(34, 34);
-            this.iconPictureBox1.TabIndex = 25;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(597, 63);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(366, 2);
-            this.panel3.TabIndex = 24;
+            this.panelTimSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTimSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(189)))), ((int)(((byte)(144)))));
+            this.panelTimSanPham.Location = new System.Drawing.Point(597, 63);
+            this.panelTimSanPham.Name = "panelTimSanPham";
+            this.panelTimSanPham.Size = new System.Drawing.Size(366, 2);
+            this.panelTimSanPham.TabIndex = 24;
             // 
             // txbTimSanPham
             // 
@@ -361,7 +351,7 @@
             this.txbTimSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txbTimSanPham.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbTimSanPham.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTimSanPham.ForeColor = System.Drawing.Color.White;
+            this.txbTimSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(189)))), ((int)(((byte)(144)))));
             this.txbTimSanPham.HideSelection = false;
             this.txbTimSanPham.Location = new System.Drawing.Point(597, 23);
             this.txbTimSanPham.Name = "txbTimSanPham";
@@ -380,77 +370,104 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Lọc theo:";
             // 
-            // btnSuaNV
+            // btnTTNX
             // 
-            this.btnSuaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSuaNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuaNV.Image = global::QuanLiShopHoa.Properties.Resources.buttonSuaNV;
-            this.btnSuaNV.Location = new System.Drawing.Point(1132, 751);
-            this.btnSuaNV.Name = "btnSuaNV";
-            this.btnSuaNV.Size = new System.Drawing.Size(147, 55);
-            this.btnSuaNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSuaNV.TabIndex = 29;
-            this.btnSuaNV.TabStop = false;
+            this.btnTTNX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTTNX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTTNX.Image = global::QuanLiShopHoa.Properties.Resources.buttonThongTinNhapXuat;
+            this.btnTTNX.Location = new System.Drawing.Point(1002, 149);
+            this.btnTTNX.Name = "btnTTNX";
+            this.btnTTNX.Size = new System.Drawing.Size(409, 75);
+            this.btnTTNX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTTNX.TabIndex = 32;
+            this.btnTTNX.TabStop = false;
+            this.btnTTNX.MouseLeave += new System.EventHandler(this.btnTTNX_MouseLeave);
+            this.btnTTNX.MouseHover += new System.EventHandler(this.btnTTNX_MouseHover);
             // 
-            // btnThemNV
+            // btnXuat
             // 
-            this.btnThemNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThemNV.Image = global::QuanLiShopHoa.Properties.Resources.buttonThemNV;
-            this.btnThemNV.Location = new System.Drawing.Point(1284, 751);
-            this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(147, 55);
-            this.btnThemNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnThemNV.TabIndex = 28;
-            this.btnThemNV.TabStop = false;
+            this.btnXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXuat.Image = global::QuanLiShopHoa.Properties.Resources.buttonXuat;
+            this.btnXuat.Location = new System.Drawing.Point(1232, 73);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(199, 71);
+            this.btnXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnXuat.TabIndex = 31;
+            this.btnXuat.TabStop = false;
+            this.btnXuat.MouseLeave += new System.EventHandler(this.btnXuat_MouseLeave);
+            this.btnXuat.MouseHover += new System.EventHandler(this.btnXuat_MouseHover);
             // 
-            // btnXoaNV
+            // btnNhap
             // 
-            this.btnXoaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoaNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaNV.Image = global::QuanLiShopHoa.Properties.Resources.buttonXoaNV;
-            this.btnXoaNV.Location = new System.Drawing.Point(981, 751);
-            this.btnXoaNV.Name = "btnXoaNV";
-            this.btnXoaNV.Size = new System.Drawing.Size(147, 55);
-            this.btnXoaNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnXoaNV.TabIndex = 27;
-            this.btnXoaNV.TabStop = false;
+            this.btnNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhap.Image = global::QuanLiShopHoa.Properties.Resources.buttonNhap;
+            this.btnNhap.Location = new System.Drawing.Point(981, 73);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Size = new System.Drawing.Size(199, 71);
+            this.btnNhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNhap.TabIndex = 30;
+            this.btnNhap.TabStop = false;
+            this.btnNhap.MouseLeave += new System.EventHandler(this.btnNhap_MouseLeave);
+            this.btnNhap.MouseHover += new System.EventHandler(this.btnNhap_MouseHover);
             // 
-            // pictureBox1
+            // btnSuaSP
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::QuanLiShopHoa.Properties.Resources.buttonXoaNV;
-            this.pictureBox1.Location = new System.Drawing.Point(981, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
+            this.btnSuaSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuaSP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuaSP.Image = global::QuanLiShopHoa.Properties.Resources.buttonSuaNVhover;
+            this.btnSuaSP.Location = new System.Drawing.Point(1132, 751);
+            this.btnSuaSP.Name = "btnSuaSP";
+            this.btnSuaSP.Size = new System.Drawing.Size(147, 55);
+            this.btnSuaSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSuaSP.TabIndex = 29;
+            this.btnSuaSP.TabStop = false;
+            this.btnSuaSP.MouseLeave += new System.EventHandler(this.btnSuaSP_MouseLeave);
+            this.btnSuaSP.MouseHover += new System.EventHandler(this.btnSuaSP_MouseHover);
             // 
-            // pictureBox2
+            // btnThemSP
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::QuanLiShopHoa.Properties.Resources.buttonXoaNV;
-            this.pictureBox2.Location = new System.Drawing.Point(1232, 73);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(199, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
+            this.btnThemSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemSP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemSP.Image = global::QuanLiShopHoa.Properties.Resources.buttonThemNVhover;
+            this.btnThemSP.Location = new System.Drawing.Point(1284, 751);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(147, 55);
+            this.btnThemSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnThemSP.TabIndex = 28;
+            this.btnThemSP.TabStop = false;
+            this.btnThemSP.MouseLeave += new System.EventHandler(this.btnThemSP_MouseLeave);
+            this.btnThemSP.MouseHover += new System.EventHandler(this.btnThemSP_MouseHover);
             // 
-            // pictureBox3
+            // btnXoaSP
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::QuanLiShopHoa.Properties.Resources.buttonXoaNV;
-            this.pictureBox3.Location = new System.Drawing.Point(1108, 150);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(199, 71);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
+            this.btnXoaSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoaSP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaSP.Image = global::QuanLiShopHoa.Properties.Resources.buttonXoaNVhover;
+            this.btnXoaSP.Location = new System.Drawing.Point(981, 751);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Size = new System.Drawing.Size(147, 55);
+            this.btnXoaSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnXoaSP.TabIndex = 27;
+            this.btnXoaSP.TabStop = false;
+            this.btnXoaSP.MouseLeave += new System.EventHandler(this.btnXoaSP_MouseLeave);
+            this.btnXoaSP.MouseHover += new System.EventHandler(this.btnXoaSP_MouseHover);
+            // 
+            // iconTimSanPham
+            // 
+            this.iconTimSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconTimSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.iconTimSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(189)))), ((int)(((byte)(144)))));
+            this.iconTimSanPham.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconTimSanPham.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(189)))), ((int)(((byte)(144)))));
+            this.iconTimSanPham.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconTimSanPham.IconSize = 34;
+            this.iconTimSanPham.Location = new System.Drawing.Point(928, 23);
+            this.iconTimSanPham.Name = "iconTimSanPham";
+            this.iconTimSanPham.Size = new System.Drawing.Size(34, 34);
+            this.iconTimSanPham.TabIndex = 25;
+            this.iconTimSanPham.TabStop = false;
             // 
             // formQuanLiKho
             // 
@@ -458,37 +475,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1452, 889);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSuaNV);
-            this.Controls.Add(this.btnThemNV);
-            this.Controls.Add(this.btnXoaNV);
+            this.Controls.Add(this.btnTTNX);
+            this.Controls.Add(this.btnXuat);
+            this.Controls.Add(this.btnNhap);
+            this.Controls.Add(this.btnSuaSP);
+            this.Controls.Add(this.btnThemSP);
+            this.Controls.Add(this.btnXoaSP);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.iconPictureBox1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.iconTimSanPham);
+            this.Controls.Add(this.panelTimSanPham);
             this.Controls.Add(this.txbTimSanPham);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dtgvAccount);
+            this.Controls.Add(this.dtgvProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formQuanLiKho";
             this.Text = "formQuanLiKho";
-            this.Load += new System.EventHandler(this.formQuanLiKho_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconDiaChi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSoDienThoai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconHoTen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMatKhau)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconLoaiSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSoLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconDonGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconTenSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSuaNV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemNV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoaNV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTTNX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSuaSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnThemSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoaSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTimSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,32 +512,32 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dtgvAccount;
+        private System.Windows.Forms.DataGridView dtgvProduct;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconPictureBox iconDiaChi;
-        private System.Windows.Forms.Panel panelDiaChi;
+        private FontAwesome.Sharp.IconPictureBox iconMua;
+        private System.Windows.Forms.Panel panelMua;
         private System.Windows.Forms.TextBox txbMua;
-        private FontAwesome.Sharp.IconPictureBox iconSoDienThoai;
-        private System.Windows.Forms.Panel panelSoDienThoai;
+        private FontAwesome.Sharp.IconPictureBox iconLoaiSanPham;
+        private System.Windows.Forms.Panel panelLoaiSanPham;
         private System.Windows.Forms.TextBox txbLoaiSanPham;
-        private FontAwesome.Sharp.IconPictureBox iconHoTen;
-        private System.Windows.Forms.Panel panelHoTen;
+        private FontAwesome.Sharp.IconPictureBox iconSoLuong;
+        private System.Windows.Forms.Panel panelSoLuong;
         private System.Windows.Forms.TextBox txbSoLuong;
-        private FontAwesome.Sharp.IconPictureBox iconMatKhau;
-        private System.Windows.Forms.Panel panelMatKhau;
+        private FontAwesome.Sharp.IconPictureBox iconDonGia;
+        private System.Windows.Forms.Panel panelDonGia;
         private System.Windows.Forms.TextBox txbDonGia;
         private FontAwesome.Sharp.IconPictureBox iconTenSanPham;
         private System.Windows.Forms.Panel panelTenSanPham;
         private System.Windows.Forms.TextBox txbTenSanPham;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconPictureBox iconTimSanPham;
+        private System.Windows.Forms.Panel panelTimSanPham;
         private System.Windows.Forms.TextBox txbTimSanPham;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox btnSuaNV;
-        private System.Windows.Forms.PictureBox btnThemNV;
-        private System.Windows.Forms.PictureBox btnXoaNV;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnSuaSP;
+        private System.Windows.Forms.PictureBox btnThemSP;
+        private System.Windows.Forms.PictureBox btnXoaSP;
+        private System.Windows.Forms.PictureBox btnNhap;
+        private System.Windows.Forms.PictureBox btnXuat;
+        private System.Windows.Forms.PictureBox btnTTNX;
     }
 }

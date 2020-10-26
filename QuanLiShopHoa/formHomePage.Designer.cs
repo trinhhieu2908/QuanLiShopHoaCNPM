@@ -273,14 +273,16 @@
             // 
             // lbHoTen
             // 
+            this.lbHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbHoTen.AutoSize = true;
             this.lbHoTen.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHoTen.ForeColor = System.Drawing.Color.White;
-            this.lbHoTen.Location = new System.Drawing.Point(643, 60);
+            this.lbHoTen.Location = new System.Drawing.Point(687, 60);
             this.lbHoTen.Name = "lbHoTen";
             this.lbHoTen.Size = new System.Drawing.Size(57, 29);
             this.lbHoTen.TabIndex = 5;
             this.lbHoTen.Text = "User";
+            this.lbHoTen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnMinimize
             // 

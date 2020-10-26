@@ -55,8 +55,7 @@
             this.txbTenDangNhap.Size = new System.Drawing.Size(382, 38);
             this.txbTenDangNhap.TabIndex = 1;
             this.txbTenDangNhap.Text = "Admin";
-            this.txbTenDangNhap.Click += new System.EventHandler(this.txbTenDangNhap_Click);
-            this.txbTenDangNhap.TextChanged += new System.EventHandler(this.txbTenDangNhap_TextChanged);
+            this.txbTenDangNhap.Click += new System.EventHandler(this.txbTenDangNhap_Click);            
             this.txbTenDangNhap.DoubleClick += new System.EventHandler(this.txbTenDangNhap_DoubleClick);
             // 
             // panel1
@@ -87,6 +86,7 @@
             this.txbMatKhau.TabIndex = 4;
             this.txbMatKhau.Text = "123";
             this.txbMatKhau.Click += new System.EventHandler(this.txbMatKhau_Click);
+            this.txbMatKhau.DoubleClick += new System.EventHandler(this.txbMatKhau_DoubleClick);
             // 
             // btnDangNhap
             // 

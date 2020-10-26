@@ -118,23 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="passwordloginClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\passwordloginClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="passwordlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\passwordlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="userloginClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userloginClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="userlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSuaNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonSuaNV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buttonSuaNVhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonSuaNVhover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="passwordlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\passwordlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonThemNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonThemNV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,10 +136,40 @@
   <data name="buttonThemNVhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonThemNVhover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buttonNhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonNhap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonThongTinNhapXuat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonThongTinNhapXuat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonXuat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonXuat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonThongTinNhapXuathover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonThongTinNhapXuathover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonNhaphover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonNhaphover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buttonXoaNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonXoaNV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="passwordloginClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\passwordloginClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonSuaNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonSuaNV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonXuathover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonXuathover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buttonXoaNVhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonXoaNVhover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonThanhToan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonThanhToan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonThanhToanhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonThanhToanhover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

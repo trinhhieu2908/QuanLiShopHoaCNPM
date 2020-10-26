@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiShopHoa.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,118 @@ namespace QuanLiShopHoa
 {
     public partial class formQuanLiKho : Form
     {
+
+        BindingSource ProductList = new BindingSource();
         public formQuanLiKho()
         {
             InitializeComponent();
+
+            dtgvProduct.DataSource = ProductList;
+
+            LoadListProduct();
+            AddProductBinding();
         }
 
-        private void txbTenSanPham_Click(object sender, EventArgs e)
-        {
 
+        #region design
+        private void btnThemSP_MouseHover(object sender, EventArgs e)
+        {
+            btnThemSP.Image = Properties.Resources.buttonThemNV;
         }
 
-        private void formQuanLiKho_Load(object sender, EventArgs e)
+        private void btnThemSP_MouseLeave(object sender, EventArgs e)
         {
+            btnThemSP.Image = Properties.Resources.buttonThemNVhover;
+        }
 
+        private void btnSuaSP_MouseHover(object sender, EventArgs e)
+        {
+            btnSuaSP.Image = Properties.Resources.buttonSuaNV;
+        }
+
+        private void btnSuaSP_MouseLeave(object sender, EventArgs e)
+        {
+            btnSuaSP.Image = Properties.Resources.buttonSuaNVhover;
+        }
+
+        private void btnXoaSP_MouseHover(object sender, EventArgs e)
+        {
+            btnXoaSP.Image = Properties.Resources.buttonXoaNV;
+        }
+
+        private void btnXoaSP_MouseLeave(object sender, EventArgs e)
+        {
+            btnXoaSP.Image = Properties.Resources.buttonXoaNVhover;
+        }
+
+        private void btnTTNX_MouseHover(object sender, EventArgs e)
+        {
+            btnTTNX.Image = Properties.Resources.buttonThongTinNhapXuathover;
+        }
+
+        private void btnTTNX_MouseLeave(object sender, EventArgs e)
+        {
+            btnTTNX.Image = Properties.Resources.buttonThongTinNhapXuat;
+        }
+
+        private void btnNhap_MouseHover(object sender, EventArgs e)
+        {
+            btnNhap.Image = Properties.Resources.buttonNhaphover;
+        }
+
+        private void btnNhap_MouseLeave(object sender, EventArgs e)
+        {
+            btnNhap.Image = Properties.Resources.buttonNhap;
+        }
+
+        private void btnXuat_MouseHover(object sender, EventArgs e)
+        {
+            btnXuat.Image = Properties.Resources.buttonXuathover;
+        }
+
+        private void btnXuat_MouseLeave(object sender, EventArgs e)
+        {
+            btnXuat.Image = Properties.Resources.buttonXuat;
+        }
+
+        private void txbTenSanPham_DoubleClick(object sender, EventArgs e)
+        {
+            txbTenSanPham.Clear();
+        }
+
+        private void txbDonGia_DoubleClick(object sender, EventArgs e)
+        {
+            txbDonGia.Clear();
+        }
+
+        private void txbSoLuong_DoubleClick(object sender, EventArgs e)
+        {
+            txbSoLuong.Clear();
+        }
+
+        private void txbLoaiSanPham_DoubleClick(object sender, EventArgs e)
+        {
+            txbLoaiSanPham.Clear();
+        }
+
+        private void txbMua_DoubleClick(object sender, EventArgs e)
+        {
+            txbMua.Clear();
+        }
+        #endregion
+
+        void LoadListProduct()
+        {
+            ProductList.DataSource = ProductDAO.Instance.GetListProduct();
+        }
+
+        void AddProductBinding()
+        {
+            txbTenSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "tenSanPham", true, DataSourceUpdateMode.Never));
+            txbDonGia.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "donGia", true, DataSourceUpdateMode.Never));
+            txbSoLuong.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "soLuong", true, DataSourceUpdateMode.Never));
+            txbLoaiSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "loaiSanPham", true, DataSourceUpdateMode.Never));
+            txbMua.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "mua", true, DataSourceUpdateMode.Never));
         }
     }
 }

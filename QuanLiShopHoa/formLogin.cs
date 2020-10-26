@@ -22,39 +22,7 @@ namespace QuanLiShopHoa
 
 
         #region events
-        private void txbTenDangNhap_Click(object sender, EventArgs e)
-        {            
-            picTenDangNhap.BackgroundImage = Properties.Resources.userloginClick;
-            panel1.BackColor = Color.FromArgb(80, 8, 189);
-            txbTenDangNhap.ForeColor = Color.FromArgb(80, 8, 189);
-            
-            picMatKhau.BackgroundImage = Properties.Resources.passwordlogin;
-            panel2.BackColor = Color.Black;
-            txbMatKhau.ForeColor = Color.Black;
-        }
-
-        private void txbMatKhau_Click(object sender, EventArgs e)
-        {            
-            picMatKhau.BackgroundImage = Properties.Resources.passwordloginClick;
-            panel2.BackColor = Color.FromArgb(80, 8, 189);
-            txbMatKhau.ForeColor = Color.FromArgb(80, 8, 189);
-
-            picTenDangNhap.BackgroundImage = Properties.Resources.userlogin;
-            panel1.BackColor = Color.Black;
-            txbTenDangNhap.ForeColor = Color.Black;
-        }
-
-        private void txbTenDangNhap_DoubleClick(object sender, EventArgs e)
-        {
-            txbTenDangNhap.Clear();
-            txbMatKhau.Clear();
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+       
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string tenDangNhap = txbTenDangNhap.Text;
@@ -101,11 +69,46 @@ namespace QuanLiShopHoa
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void txbMatKhau_DoubleClick(object sender, EventArgs e)
+        {
+            txbMatKhau.Clear();
+        }
+
+        private void txbTenDangNhap_DoubleClick(object sender, EventArgs e)
+        {
+            txbTenDangNhap.Clear();
+            txbMatKhau.Clear();
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txbTenDangNhap_Click(object sender, EventArgs e)
+        {
+            picTenDangNhap.BackgroundImage = Properties.Resources.userloginClick;
+            panel1.BackColor = Color.FromArgb(80, 8, 189);
+            txbTenDangNhap.ForeColor = Color.FromArgb(80, 8, 189);
+
+            picMatKhau.BackgroundImage = Properties.Resources.passwordlogin;
+            panel2.BackColor = Color.Black;
+            txbMatKhau.ForeColor = Color.Black;
+        }
+
+        private void txbMatKhau_Click(object sender, EventArgs e)
+        {
+            picMatKhau.BackgroundImage = Properties.Resources.passwordloginClick;
+            panel2.BackColor = Color.FromArgb(80, 8, 189);
+            txbMatKhau.ForeColor = Color.FromArgb(80, 8, 189);
+
+            picTenDangNhap.BackgroundImage = Properties.Resources.userlogin;
+            panel1.BackColor = Color.Black;
+            txbTenDangNhap.ForeColor = Color.Black;
+        }
         #endregion
 
-        private void txbTenDangNhap_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

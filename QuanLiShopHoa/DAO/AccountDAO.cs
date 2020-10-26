@@ -16,7 +16,7 @@ namespace QuanLiShopHoa.DAO
 
         public static AccountDAO Instance 
         {
-            get { if (instance == null) instance = new AccountDAO(); return instance; }
+            get { if (instance == null) instance = new AccountDAO(); return AccountDAO.instance; }
             private set { instance = value; }
         }
 
