@@ -62,6 +62,7 @@ namespace QuanLiShopHoa
             if (DangNhap(tenDangNhap, matKhau))
             {
                 Account loginAccount = AccountDAO.Instance.GetAccountByTenDangNhap(tenDangNhap);
+
                 formHomePage f = new formHomePage(loginAccount);
                 this.Hide();
                 f.ShowDialog();

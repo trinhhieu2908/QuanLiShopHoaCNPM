@@ -32,6 +32,7 @@ namespace QuanLiShopHoa.DTO
             this.MatKhau = row["matKhau"].ToString();
         }
 
+
         private string tenDangNhap; 
         public string TenDangNhap {
             get { return tenDangNhap; }

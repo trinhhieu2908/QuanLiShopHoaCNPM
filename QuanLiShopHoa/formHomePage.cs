@@ -16,7 +16,7 @@ namespace QuanLiShopHoa
     public partial class formHomePage : Form
     {
         private Account loginAccount;
-        public Account LoginAccount1 {
+        public Account LoginAccount {
             get { return loginAccount; }
             set { loginAccount = value; }
         }
@@ -53,9 +53,27 @@ namespace QuanLiShopHoa
 
         void ChangeAccount(int loaiTaiKhoan, string hoTen)
         {
-            btnQuanLiKho.Enabled = loaiTaiKhoan == 1;
-            btnQuanLiNhanVien.Enabled = loaiTaiKhoan == 1;
-            btnQuanLiDoanhThu.Enabled = loaiTaiKhoan == 1;
+            if(loaiTaiKhoan == 0 || loaiTaiKhoan == 1)
+            {
+                btnQuanLiKho.Enabled = true;
+                btnQuanLiNhanVien.Enabled = true;
+                btnQuanLiDoanhThu.Enabled = true;
+            }
+            else if (loaiTaiKhoan == 10)
+            {
+                MessageBox.Show("Tài khoản đã bị vô hiệu hóa!");
+                btnTaoDonHang.Enabled = false;
+                btnQuanLiDonHang.Enabled = false;
+                btnQuanLiKho.Enabled = false;
+                btnQuanLiNhanVien.Enabled = false;
+                btnQuanLiDoanhThu.Enabled = false;
+            }
+            else
+            {
+                btnQuanLiKho.Enabled = false;
+                btnQuanLiNhanVien.Enabled = false;
+                btnQuanLiDoanhThu.Enabled = false;
+            }
             lbHoTen.Text = hoTen;
         }
 
@@ -180,7 +198,9 @@ namespace QuanLiShopHoa
         private void btnQuanLiNhanVien_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color4);
-            openChildForm(new formQuanLiNhanVien());
+            formQuanLiNhanVien f = new formQuanLiNhanVien();
+            f.loginAccount = loginAccount;
+            openChildForm(f);
             panelShadow.BackColor = RGBColors.color4;
         }
 

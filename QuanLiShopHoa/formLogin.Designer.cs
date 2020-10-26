@@ -54,7 +54,7 @@
             this.txbTenDangNhap.Name = "txbTenDangNhap";
             this.txbTenDangNhap.Size = new System.Drawing.Size(382, 38);
             this.txbTenDangNhap.TabIndex = 1;
-            this.txbTenDangNhap.Text = "QuanLiCuaHang";
+            this.txbTenDangNhap.Text = "Admin";
             this.txbTenDangNhap.Click += new System.EventHandler(this.txbTenDangNhap_Click);
             this.txbTenDangNhap.TextChanged += new System.EventHandler(this.txbTenDangNhap_TextChanged);
             this.txbTenDangNhap.DoubleClick += new System.EventHandler(this.txbTenDangNhap_DoubleClick);
@@ -85,7 +85,7 @@
             this.txbMatKhau.Name = "txbMatKhau";
             this.txbMatKhau.Size = new System.Drawing.Size(382, 38);
             this.txbMatKhau.TabIndex = 4;
-            this.txbMatKhau.Text = "123456";
+            this.txbMatKhau.Text = "123";
             this.txbMatKhau.Click += new System.EventHandler(this.txbMatKhau_Click);
             // 
             // btnDangNhap

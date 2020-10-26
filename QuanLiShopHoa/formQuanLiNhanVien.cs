@@ -1,4 +1,5 @@
 ﻿using QuanLiShopHoa.DAO;
+using QuanLiShopHoa.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace QuanLiShopHoa
 {
     public partial class formQuanLiNhanVien : Form
     {
+        public Account loginAccount;
         BindingSource AccountList = new BindingSource();
         public formQuanLiNhanVien()
         {
@@ -40,10 +42,92 @@ namespace QuanLiShopHoa
             public static Color color5 = Color.FromArgb(232, 245, 91);
 
         }
+
+        private void btnXoaNV_MouseHover(object sender, EventArgs e)
+        {
+            btnXoaNV.Image = Properties.Resources.buttonXoaNVhover;
+        }
+
+        private void btnXoaNV_MouseLeave(object sender, EventArgs e)
+        {
+            btnXoaNV.Image = Properties.Resources.buttonXoaNV;
+        }
+
+        private void btnSuaNV_MouseHover(object sender, EventArgs e)
+        {
+            btnSuaNV.Image = Properties.Resources.buttonSuaNVhover;
+        }
+
+        private void btnSuaNV_MouseLeave(object sender, EventArgs e)
+        {
+            btnSuaNV.Image = Properties.Resources.buttonSuaNV;
+        }
+
+        private void btnThemNV_MouseHover(object sender, EventArgs e)
+        {
+            btnThemNV.Image = Properties.Resources.buttonThemNVhover;
+        }
+
+        private void btnThemNV_MouseLeave(object sender, EventArgs e)
+        {
+            btnThemNV.Image = Properties.Resources.buttonThemNV;
+        }
         #endregion
 
 
         #region events
+
+        private void btnXoaNV_Click(object sender, EventArgs e)
+        {            
+            string tenDangNhap = txbTenDangNhap.Text;
+
+            DeleteAccount(tenDangNhap);
+        }
+
+        private void btnSuaNV_Click(object sender, EventArgs e)
+        {
+            string tenDangNhap = txbTenDangNhap.Text;
+            string matKhau = txbMatKhau.Text;
+            string hoTen = txbHoTen.Text;
+            DateTime? ngaySinh = dateTimeNgaySinh.Value;
+            string soDienThoai = txbSoDienThoai.Text;
+            string diaChi = txbDiaChi.Text;
+            int loaiTaiKhoan = (int)numericUpDownLoaiTaiKhoan.Value;
+
+            if ((int)numericUpDownLoaiTaiKhoan.Value == 0)
+            {
+                MessageBox.Show("Không được sửa thành tài khoản dạng Admin");
+            }
+            else
+            {
+                UpdateAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan);
+            }
+
+            
+        }
+
+        private void btnThemNV_Click(object sender, EventArgs e)
+        {
+            string tenDangNhap = txbTenDangNhap.Text;
+            string matKhau = txbMatKhau.Text;
+            string hoTen = txbHoTen.Text;
+            DateTime? ngaySinh = dateTimeNgaySinh.Value;
+            string soDienThoai = txbSoDienThoai.Text;
+            string diaChi = txbDiaChi.Text;
+            int loaiTaiKhoan = (int)numericUpDownLoaiTaiKhoan.Value;
+
+            if ((int)numericUpDownLoaiTaiKhoan.Value == 0)
+            {
+                MessageBox.Show("Không được thêm tài khoản dạng Admin");
+            }
+            else
+            {
+                AddAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan);
+            }
+
+            
+        }
+
         private void txbTenDangNhap_Click(object sender, EventArgs e)
         {
             //textbox
@@ -232,7 +316,51 @@ namespace QuanLiShopHoa
         }
         #endregion
 
-        #region method
+        #region method    
+        
+        void DeleteAccount(string tenDangNhap)
+        {
+            if (loginAccount.TenDangNhap.Equals(tenDangNhap))
+            {
+                MessageBox.Show("Không thể xóa chính mình!");
+                return;
+            }
+            if (AccountDAO.Instance.DeleteAccount(tenDangNhap))
+            {
+                MessageBox.Show("Xóa nhân viên thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Xóa nhân viên thất bại!");
+            }
+            LoadListAccount();
+        }
+
+        void UpdateAccount(string tenDangNhap, string matKhau, string hoTen, DateTime? ngaySinh, string soDienThoai, string diaChi, int loaiTaiKhoan)
+        {
+            if(AccountDAO.Instance.UpdateAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan))
+            {
+                MessageBox.Show("Cập nhật nhân viên thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật nhân viên thất bại!");
+            }
+            LoadListAccount();
+        }
+
+        void AddAccount(string tenDangNhap, string matKhau, string hoTen, DateTime? ngaySinh, string soDienThoai, string diaChi, int loaiTaiKhoan)
+        {            
+            if(AccountDAO.Instance.InsertAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan))
+            {
+                MessageBox.Show("Thêm nhân viên thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm nhân viên thất bại vui lòng kiểm tra tên đăng nhập có trùng hay không!");
+            }
+            LoadListAccount();
+        }
 
         void LoadListAccount()
         {
@@ -241,43 +369,20 @@ namespace QuanLiShopHoa
 
         void AddAccountBinding()
         {
-            txbTenDangNhap.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "tenDangNhap"));
-            txbMatKhau.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "matKhau"));
-            txbHoTen.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "hoTen"));
-            dateTimeNgaySinh.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "ngaySinh"));
-            txbSoDienThoai.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "soDienThoai"));
-            txbDiaChi.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "diaChi"));
+            txbTenDangNhap.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never));
+            txbMatKhau.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "matKhau", true, DataSourceUpdateMode.Never));
+            txbHoTen.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "hoTen", true, DataSourceUpdateMode.Never));
+            dateTimeNgaySinh.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never));
+            txbSoDienThoai.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "soDienThoai", true, DataSourceUpdateMode.Never));
+            txbDiaChi.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "diaChi", true, DataSourceUpdateMode.Never));
+            numericUpDownLoaiTaiKhoan.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "loaiTaiKhoan", true, DataSourceUpdateMode.Never));
         }
+
+
+
+
         #endregion
 
-        private void btnXoaNV_MouseHover(object sender, EventArgs e)
-        {
-            btnXoaNV.Image = Properties.Resources.buttonXoaNVhover;
-        }
-
-        private void btnXoaNV_MouseLeave(object sender, EventArgs e)
-        {
-            btnXoaNV.Image = Properties.Resources.buttonXoaNV;
-        }
-
-        private void btnSuaNV_MouseHover(object sender, EventArgs e)
-        {
-            btnSuaNV.Image = Properties.Resources.buttonSuaNVhover;
-        }
-
-        private void btnSuaNV_MouseLeave(object sender, EventArgs e)
-        {
-            btnSuaNV.Image = Properties.Resources.buttonSuaNV;
-        }
-
-        private void btnThemNV_MouseHover(object sender, EventArgs e)
-        {
-            btnThemNV.Image = Properties.Resources.buttonThemNVhover;
-        }
-
-        private void btnThemNV_MouseLeave(object sender, EventArgs e)
-        {
-            btnThemNV.Image = Properties.Resources.buttonThemNV;
-        }
+        
     }
 }
