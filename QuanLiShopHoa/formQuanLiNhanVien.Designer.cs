@@ -202,6 +202,7 @@
             this.dateTimeNgaySinh.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dateTimeNgaySinh.CalendarTitleForeColor = System.Drawing.Color.Black;
             this.dateTimeNgaySinh.CalendarTrailingForeColor = System.Drawing.Color.DimGray;
+            this.dateTimeNgaySinh.Checked = false;
             this.dateTimeNgaySinh.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeNgaySinh.Location = new System.Drawing.Point(65, 271);
