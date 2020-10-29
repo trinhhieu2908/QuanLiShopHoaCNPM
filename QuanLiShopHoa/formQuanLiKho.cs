@@ -120,6 +120,7 @@ namespace QuanLiShopHoa
 
         void AddProductBinding()
         {
+            lbSPDangChon.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "maSo", true, DataSourceUpdateMode.Never));
             txbTenSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "tenSanPham", true, DataSourceUpdateMode.Never));
             txbDonGia.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "donGia", true, DataSourceUpdateMode.Never));
             txbSoLuong.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "soLuong", true, DataSourceUpdateMode.Never));

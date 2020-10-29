@@ -35,5 +35,10 @@ namespace QuanLiShopHoa.DAO
 
             return listBillInfo;
         }
+
+        public void InsertBillInfo(int maHoaDon, int maSanPham, int soLuong)
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBillInfo @maHoaDon , @maSanPham , @soLuong", new object[] { maHoaDon, maSanPham, soLuong });
+        }
     }
 }

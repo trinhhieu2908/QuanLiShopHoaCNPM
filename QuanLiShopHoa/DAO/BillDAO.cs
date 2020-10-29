@@ -47,5 +47,31 @@ namespace QuanLiShopHoa.DAO
             }
             return -1;
         }
+
+        public void InsertBill()
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill");
+        }
+
+        public int getMaxMaHoaDon()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("select max(maSo) from Bill");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+
+        public bool MakePayment(int maSo, float tongTien, string tenKH, string soDienThoaiKH, string nVThanhToan, string ghiChu)
+        {
+            string query = string.Format("update Bill set tongTien = {0}, tenKH = N'{1}', soDienThoaiKH = '{2}', ngayThanhToan = getdate(), nvThanhToan = N'{3}', ghiChu = N'{4}', trangThai = 1 where maSo = {5}", tongTien, tenKH, soDienThoaiKH, nVThanhToan, ghiChu, maSo);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

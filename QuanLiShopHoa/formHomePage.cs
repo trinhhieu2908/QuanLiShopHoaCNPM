@@ -177,7 +177,9 @@ namespace QuanLiShopHoa
         private void btnTaoDonHang_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color1);
-            openChildForm(new formTaoDonHang());
+            formTaoDonHang f = new formTaoDonHang();
+            f.loginAccount = loginAccount;
+            openChildForm(f);
             panelShadow.BackColor = RGBColors.color1;
         }
 
