@@ -120,8 +120,8 @@ namespace QuanLiShopHoa
                     MessageBox.Show("Số lượng sản phẩm trong kho còn lại không đủ");
                 }
                 ShowUncheckedBill(uncheckedBill.MaSo);                
-            }    
-
+            }
+            LoadListProduct();
         }
         #endregion
         #region design        
