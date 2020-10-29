@@ -37,5 +37,18 @@ namespace QuanLiShopHoa.DAO
 
             return list;
         }
+
+        public void ImportProduct(int maSanPham, int soLuong, string ghiChu)
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_ImportProduct @maSanPham , @soLuong , @ghiChu", new object[] { maSanPham, soLuong, ghiChu });
+        }
+
+        public bool ExportProduct(int maSanPham, int soLuong, string ghiChu)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_ExportProduct @maSanPham , @soLuong , @ghiChu", new object[] { maSanPham, soLuong, ghiChu });
+
+            return result > 0;
+        }
+
     }
 }

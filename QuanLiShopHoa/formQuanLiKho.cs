@@ -127,5 +127,34 @@ namespace QuanLiShopHoa
             txbLoaiSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "loaiSanPham", true, DataSourceUpdateMode.Never));
             txbMua.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "mua", true, DataSourceUpdateMode.Never));
         }
+
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
+            int soLuong = (int)numericUpDownNhapXuat.Value;
+            string ghiChu = txbGhiChu.Text;
+
+            ProductDAO.Instance.ImportProduct(maSanPham, soLuong, ghiChu);
+            MessageBox.Show("Nhập hàng thành công!");
+
+            LoadListProduct();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
+            int soLuong = (int)numericUpDownNhapXuat.Value;
+            string ghiChu = txbGhiChu.Text;
+
+            if(ProductDAO.Instance.ExportProduct(maSanPham, soLuong, ghiChu))
+            {
+                MessageBox.Show("Xuất hàng thành công!");
+                LoadListProduct();
+            }
+            else
+            {
+                MessageBox.Show("Không được xuất số lượng hàng lớn hơn số lượng sản phẩm!");
+            }
+        }
     }
 }

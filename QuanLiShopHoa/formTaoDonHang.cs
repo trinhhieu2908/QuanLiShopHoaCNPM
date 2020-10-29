@@ -111,9 +111,16 @@ namespace QuanLiShopHoa
             else
             {
                 int maHoaDon = BillDAO.Instance.GetUncheckedBillByMaSo(uncheckedBill.MaSo);
-                BillInfoDAO.Instance.InsertBillInfo(maHoaDon, maSanPham, soLuong);
-                ShowUncheckedBill(uncheckedBill.MaSo);
-            }
+                if (BillInfoDAO.Instance.InsertBillInfo(maHoaDon, maSanPham, soLuong))
+                {
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng sản phẩm trong kho còn lại không đủ");
+                }
+                ShowUncheckedBill(uncheckedBill.MaSo);                
+            }    
 
         }
         #endregion
