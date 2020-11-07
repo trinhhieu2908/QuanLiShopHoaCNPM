@@ -41,6 +41,13 @@ namespace QuanLiShopHoa.DAO
             int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertBillInfo @maHoaDon , @maSanPham , @soLuong", new object[] { maHoaDon, maSanPham, soLuong });
 
             return result > 0;
-        }        
+        }
+
+        public bool DecreaseBillInfo(int maHoaDon, int maSanPham, int soLuong)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_DecreaseBillInfo @maHoaDon , @maSanPham , @soLuong", new object[] { maHoaDon, maSanPham, soLuong });
+
+            return result > 0;
+        }
     }
 }

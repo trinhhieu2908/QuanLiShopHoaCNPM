@@ -76,7 +76,7 @@ namespace QuanLiShopHoa
 
         void AddProductBinding()
         {
-            lbSPDangChon.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "maSo", true, DataSourceUpdateMode.Never));
+            lbSPDangChon.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "maSo", true, DataSourceUpdateMode.Never));            
         }
 
         #endregion
@@ -117,11 +117,10 @@ namespace QuanLiShopHoa
                 }
                 else
                 {
-                    MessageBox.Show("Số lượng sản phẩm trong kho còn lại không đủ");
+                    MessageBox.Show("Số lượng sản phẩm trong kho còn lại không đủ");                    
                 }
                 ShowUncheckedBill(uncheckedBill.MaSo);                
-            }
-            LoadListProduct();
+            }           
         }
         #endregion
         #region design        
@@ -150,10 +149,17 @@ namespace QuanLiShopHoa
             else
             {
                 currentBill = uncheckedBill;
-
-                formXacNhanThanhToan f = new formXacNhanThanhToan(loginAccount, currentBill, totalPrice);
-                f.FormClosing += new FormClosingEventHandler(this.formXacNhanThanhToan_FormClosing);
-                f.ShowDialog();
+                if(totalPrice == 0)
+                {
+                    MessageBox.Show("Không được phép thanh toán hóa đơn rỗng!");
+                }
+                else
+                {
+                    formXacNhanThanhToan f = new formXacNhanThanhToan(loginAccount, currentBill, totalPrice);
+                    f.FormClosing += new FormClosingEventHandler(this.formXacNhanThanhToan_FormClosing);
+                    f.ShowDialog();
+                }
+                
             }
 
         }
@@ -161,6 +167,32 @@ namespace QuanLiShopHoa
         {
             flpHoaDonChuaThanhToan.Controls.Clear();
             LoadUncheckedBill();
+        }
+
+        private void btnBotSP_Click(object sender, EventArgs e)
+        {
+            Bill uncheckedBill = listViewSP.Tag as Bill;
+
+            int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
+            int soLuong = (int)numericUpDownBotSP.Value;
+
+            if (uncheckedBill == null)
+            {
+
+            }
+            else
+            {
+                int maHoaDon = BillDAO.Instance.GetUncheckedBillByMaSo(uncheckedBill.MaSo);
+                if (BillInfoDAO.Instance.DecreaseBillInfo(maHoaDon, maSanPham, soLuong))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng bớt phải nhỏ hơn hoặc bằng số lượng trong hóa đơn!");
+                }
+                ShowUncheckedBill(uncheckedBill.MaSo);
+            }
         }
     }
 }
