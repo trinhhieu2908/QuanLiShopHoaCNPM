@@ -252,8 +252,5 @@ namespace QuanLiShopHoa
         }
         #endregion
 
-
-
-
     }
 }
