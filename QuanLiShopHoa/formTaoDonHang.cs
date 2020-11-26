@@ -106,20 +106,27 @@ namespace QuanLiShopHoa
 
             if (uncheckedBill == null)
             {
-
+                MessageBox.Show("Vui lòng chọn 1 hóa đơn!");
             }
             else
             {
-                int maHoaDon = BillDAO.Instance.GetUncheckedBillByMaSo(uncheckedBill.MaSo);
-                if (BillInfoDAO.Instance.InsertBillInfo(maHoaDon, maSanPham, soLuong))
+                try
                 {
-                    
+                    int maHoaDon = BillDAO.Instance.GetUncheckedBillByMaSo(uncheckedBill.MaSo);
+                    if (BillInfoDAO.Instance.InsertBillInfo(maHoaDon, maSanPham, soLuong))
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số lượng sản phẩm trong kho còn lại không đủ");
+                    }
+                    ShowUncheckedBill(uncheckedBill.MaSo);
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Số lượng sản phẩm trong kho còn lại không đủ");                    
-                }
-                ShowUncheckedBill(uncheckedBill.MaSo);                
+                    MessageBox.Show("Vui lòng chọn 1 hóa đơn!");
+                }              
             }           
         }
         #endregion
@@ -144,7 +151,7 @@ namespace QuanLiShopHoa
 
             if (uncheckedBill == null)
             {
-
+                MessageBox.Show("Vui lòng chọn 1 hóa đơn!");
             }
             else
             {
@@ -165,8 +172,9 @@ namespace QuanLiShopHoa
         }
         private void formXacNhanThanhToan_FormClosing(object sender, FormClosingEventArgs e)
         {
-            flpHoaDonChuaThanhToan.Controls.Clear();
+            flpHoaDonChuaThanhToan.Controls.Clear();            
             LoadUncheckedBill();
+
         }
 
         private void btnBotSP_Click(object sender, EventArgs e)
