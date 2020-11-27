@@ -157,6 +157,6 @@ namespace QuanLiShopHoa
             }
         }
 
-        //sua co xiu xiu
+        //sua co xiu thoi nha
     }
 }
