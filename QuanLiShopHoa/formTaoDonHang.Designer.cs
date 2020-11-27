@@ -56,7 +56,6 @@
             this.btnThemSP = new System.Windows.Forms.PictureBox();
             this.btnGiamGia = new System.Windows.Forms.PictureBox();
             this.btnThanhToan = new System.Windows.Forms.PictureBox();
-            this.btnXoaHoaDon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThemSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBotSP)).BeginInit();
@@ -65,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnThemSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGiamGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnThanhToan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoaHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewSP
@@ -405,25 +403,12 @@
             this.btnThanhToan.MouseLeave += new System.EventHandler(this.btnThanhToan_MouseLeave);
             this.btnThanhToan.MouseHover += new System.EventHandler(this.btnThanhToan_MouseHover);
             // 
-            // btnXoaHoaDon
-            // 
-            this.btnXoaHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoaHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaHoaDon.Image")));
-            this.btnXoaHoaDon.Location = new System.Drawing.Point(9, 22);
-            this.btnXoaHoaDon.Name = "btnXoaHoaDon";
-            this.btnXoaHoaDon.Size = new System.Drawing.Size(90, 48);
-            this.btnXoaHoaDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnXoaHoaDon.TabIndex = 43;
-            this.btnXoaHoaDon.TabStop = false;
-            // 
             // formTaoDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1445, 884);
-            this.Controls.Add(this.btnXoaHoaDon);
             this.Controls.Add(this.btnHoaDonMoi);
             this.Controls.Add(this.lbSPDangChon);
             this.Controls.Add(this.label2);
@@ -454,7 +439,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnThemSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGiamGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnThanhToan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoaHoaDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,6 +468,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbSPDangChon;
         private System.Windows.Forms.Button btnHoaDonMoi;
-        private System.Windows.Forms.PictureBox btnXoaHoaDon;
     }
 }
