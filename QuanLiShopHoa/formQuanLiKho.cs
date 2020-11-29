@@ -140,6 +140,7 @@ namespace QuanLiShopHoa
             LoadListProduct();
         }
 
+
         private void btnXuat_Click(object sender, EventArgs e)
         {
             int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
