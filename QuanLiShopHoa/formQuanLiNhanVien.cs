@@ -100,7 +100,15 @@ namespace QuanLiShopHoa
             }
             else
             {
-                UpdateAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan);
+                try
+                {
+                    UpdateAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan);
+                }
+                catch
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại kiểu ngày sinh");
+                }
+                
             }
 
             
@@ -122,7 +130,15 @@ namespace QuanLiShopHoa
             }
             else
             {
-                AddAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan);
+                try
+                {
+                    AddAccount(tenDangNhap, matKhau, hoTen, ngaySinh, soDienThoai, diaChi, loaiTaiKhoan);
+                }
+                catch
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại kiểu ngày sinh");
+                }
+                
             }
 
             
