@@ -48,6 +48,33 @@ namespace QuanLiShopHoa.DAO
             return -1;
         }
 
+        public List<Bill> GetCheckedBillListInDay(DateTime Day)
+        {
+            List<Bill> checkedBillList = new List<Bill>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetChekedBillListInDay @day", new object[] { Day });
+
+            foreach (DataRow item in data.Rows)
+            {
+                Bill bill = new Bill(item);
+                checkedBillList.Add(bill);
+            }
+
+            return checkedBillList;
+        }
+
+        public int GetCheckedBillByMaSo(int maSo)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Bill where maSo = " + maSo + " and trangThai = 1");
+
+            if (data.Rows.Count > 0)
+            {
+                Bill bill = new Bill(data.Rows[0]);
+                return bill.MaSo;
+            }
+            return -1;
+        }
+
         public void InsertBill()
         {
             DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill");

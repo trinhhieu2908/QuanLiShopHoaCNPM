@@ -27,6 +27,7 @@ namespace QuanLiShopHoa
 
             LoadListProduct();
             LoadUncheckedBill();
+            lbSPDangChon.DataBindings.Clear();
             AddProductBinding();
         }
 
@@ -122,6 +123,9 @@ namespace QuanLiShopHoa
                         MessageBox.Show("Số lượng sản phẩm trong kho còn lại không đủ");
                     }
                     ShowUncheckedBill(uncheckedBill.MaSo);
+                    LoadListProduct();
+                    lbSPDangChon.DataBindings.Clear();
+                    AddProductBinding();
                 }
                 catch
                 {
@@ -172,7 +176,9 @@ namespace QuanLiShopHoa
         }
         private void formXacNhanThanhToan_FormClosing(object sender, FormClosingEventArgs e)
         {
-            flpHoaDonChuaThanhToan.Controls.Clear();            
+            
+            flpHoaDonChuaThanhToan.Controls.Clear();
+            currentBill.MaSo = -1;
             LoadUncheckedBill();
 
         }
@@ -200,6 +206,9 @@ namespace QuanLiShopHoa
                     MessageBox.Show("Số lượng bớt phải nhỏ hơn hoặc bằng số lượng trong hóa đơn!");
                 }
                 ShowUncheckedBill(uncheckedBill.MaSo);
+                LoadListProduct();
+                lbSPDangChon.DataBindings.Clear();
+                AddProductBinding();
             }
         }
 
