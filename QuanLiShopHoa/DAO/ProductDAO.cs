@@ -50,5 +50,24 @@ namespace QuanLiShopHoa.DAO
             return result > 0;
         }
 
+        public bool InsertProduct(string tenSanPham, float donGia, string loaiSanPham, string mua)
+        {
+
+            string query = string.Format("insert into Product(tenSanPham,donGia,loaiSanPham,mua) values ( N'{0}' , {1} , N'{2}' , N'{3}')", tenSanPham, donGia, loaiSanPham, mua);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool UpdateProduct(int maSo, string tenSanPham, float donGia, string loaiSanPham, string mua)
+        {
+
+            string query = string.Format("update Product set tenSanPham = N'{0}', donGia = {1}, loaiSanPham = N'{2}', mua = N'{3}' where maSo = {6}", tenSanPham, donGia, loaiSanPham, mua, maSo);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

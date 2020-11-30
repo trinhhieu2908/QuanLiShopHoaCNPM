@@ -158,6 +158,66 @@ namespace QuanLiShopHoa
             }
         }
 
+        void AddProduct(string tenSanPham, float donGia, string loaiSanPham, string mua)
+        {
+            if (ProductDAO.Instance.InsertProduct(tenSanPham, donGia, loaiSanPham, mua))
+            {
+                MessageBox.Show("Thêm sản phẩm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm sản phẩm thất bại!");
+            }
+            LoadListProduct();
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            string tenSanPham = txbTenSanPham.Text;
+            float donGia = Convert.ToInt32(txbDonGia.Text);
+            string loaiSanPham = txbLoaiSanPham.Text;
+            string mua = txbMua.Text;
+            try
+            {
+                AddProduct(tenSanPham, donGia, loaiSanPham, mua);
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại");
+            }
+        }
+
+        void UpdateProduct(int maSo, string tenSanPham, float donGia, string loaiSanPham, string mua)
+        {
+            if (ProductDAO.Instance.UpdateProduct(maSo, tenSanPham, donGia, loaiSanPham, mua))
+            {
+                MessageBox.Show("Cập nhật sản phẩm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật sản phẩm thất bại!");
+            }
+            LoadListProduct();
+        }
+
+        private void btnSuaSP_Click(object sender, EventArgs e)
+        {
+            int maSo = Convert.ToInt32(lbSPDangChon.Text);
+            string tenSanPham = txbTenSanPham.Text;
+            float donGia = Convert.ToInt32(txbDonGia.Text);
+            string loaiSanPham = txbLoaiSanPham.Text;
+            string mua = txbMua.Text;
+            try
+            {
+                UpdateProduct(maSo, tenSanPham, donGia, loaiSanPham, mua);
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng kiểm tra");
+            }
+        
+        }
+
         //sua co xiu thoi nha
     }
 }
