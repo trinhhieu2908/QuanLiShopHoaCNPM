@@ -63,7 +63,7 @@ namespace QuanLiShopHoa.DAO
         public bool UpdateProduct(int maSo, string tenSanPham, float donGia, string loaiSanPham, string mua)
         {
 
-            string query = string.Format("update Product set tenSanPham = N'{0}', donGia = {1}, loaiSanPham = N'{2}', mua = N'{3}' where maSo = {6}", tenSanPham, donGia, loaiSanPham, mua, maSo);
+            string query = string.Format("update Product set tenSanPham = N'{0}', donGia = {1}, loaiSanPham = N'{2}', mua = N'{3}' where maSo = {4}", tenSanPham, donGia, loaiSanPham, mua, maSo);
 
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
