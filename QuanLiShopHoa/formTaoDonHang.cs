@@ -18,6 +18,7 @@ namespace QuanLiShopHoa
         public Account loginAccount;
         public Bill currentBill;
         public float totalPrice;
+        public float totalPriceDe;
         BindingSource ProductList = new BindingSource();
         public formTaoDonHang()
         {
@@ -71,6 +72,7 @@ namespace QuanLiShopHoa
                 listViewSP.Items.Add(lsvItem);
             }
             totalPrice = tongTien;
+            totalPriceDe = tongTien;
             CultureInfo culture = new CultureInfo("vi-Vn");
             txbTongTien.Text = tongTien.ToString("c", culture);
         }
@@ -210,6 +212,19 @@ namespace QuanLiShopHoa
                 lbSPDangChon.DataBindings.Clear();
                 AddProductBinding();
             }
+        }        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int discount = Convert.ToInt32(comboBox1.SelectedItem);
+            if(discount == 0)
+            {
+                totalPrice = totalPriceDe;
+            }
+            totalPrice = totalPrice - (totalPrice * discount) / 100;
+
+            CultureInfo culture = new CultureInfo("vi-Vn");
+            txbTongTien.Text = totalPrice.ToString("c", culture);
         }
 
         // alo alo

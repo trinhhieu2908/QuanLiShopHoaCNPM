@@ -63,7 +63,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvCheckedBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgvCheckedBill.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvCheckedBill.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtgvCheckedBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvCheckedBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvCheckedBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
