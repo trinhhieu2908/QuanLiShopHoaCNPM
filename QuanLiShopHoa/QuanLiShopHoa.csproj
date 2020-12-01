@@ -58,8 +58,16 @@
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Export.cs" />
+    <Compile Include="DTO\Import.cs" />
     <Compile Include="DTO\MenuBillInfo.cs" />
     <Compile Include="DTO\Product.cs" />
+    <Compile Include="formThongTinNhapXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formThongTinNhapXuat.Designer.cs">
+      <DependentUpon>formThongTinNhapXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formTaoDonHang.resx">
       <DependentUpon>formTaoDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formThongTinNhapXuat.resx">
+      <DependentUpon>formThongTinNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formXacNhanThanhToan.resx">
       <DependentUpon>formXacNhanThanhToan.cs</DependentUpon>

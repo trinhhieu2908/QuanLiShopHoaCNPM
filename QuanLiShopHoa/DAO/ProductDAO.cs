@@ -86,5 +86,73 @@ namespace QuanLiShopHoa.DAO
 
             return list;
         }
+
+        public List<Import> SearchImportByMaSanPham(int maSanPham)
+        {
+            List<Import> list = new List<Import>();
+
+            string query = string.Format("select * from Import where maSanPham = {0}" , maSanPham);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Import import = new Import(item);
+                list.Add(import);
+            }
+
+            return list;
+        }
+
+        public List<Export> SearchExportByMaSanPham(int maSanPham)
+        {
+            List<Export> list = new List<Export>();
+
+            string query = string.Format("select * from Export where maSanPham = {0}" , maSanPham);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Export export = new Export(item);
+                list.Add(export);
+            }
+
+            return list;
+        }
+
+        public List<Import> GetListImport()
+        {
+            List<Import> list = new List<Import>();
+
+            string query = "select * from Import";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Import import = new Import(item);
+                list.Add(import);
+            }
+
+            return list;
+        }
+
+        public List<Export> GetListExport()
+        {
+            List<Export> list = new List<Export>();
+
+            string query = "select * from Export";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Export export = new Export(item);
+                list.Add(export);
+            }
+
+            return list;
+        }
     }
 }

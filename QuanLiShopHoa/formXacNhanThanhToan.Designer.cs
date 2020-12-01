@@ -47,6 +47,10 @@
             this.btnXacNhanThanhToan = new System.Windows.Forms.PictureBox();
             this.btnInHoaDon = new System.Windows.Forms.PictureBox();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnXacNhanThanhToan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -266,12 +270,48 @@
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(95)))));
+            this.panel3.Location = new System.Drawing.Point(-3, 575);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(920, 5);
+            this.panel3.TabIndex = 56;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(95)))));
+            this.panel4.Location = new System.Drawing.Point(-2, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(920, 5);
+            this.panel4.TabIndex = 57;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(95)))));
+            this.panel5.Location = new System.Drawing.Point(0, -8);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 600);
+            this.panel5.TabIndex = 58;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(95)))));
+            this.panel6.Location = new System.Drawing.Point(905, -5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 600);
+            this.panel6.TabIndex = 59;
+            // 
             // formXacNhanThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(911, 580);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnInHoaDon);
             this.Controls.Add(this.btnXacNhanThanhToan);
@@ -322,5 +362,9 @@
         private System.Windows.Forms.PictureBox btnXacNhanThanhToan;
         private System.Windows.Forms.PictureBox btnInHoaDon;
         private FontAwesome.Sharp.IconPictureBox btnClose;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

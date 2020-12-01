@@ -84,7 +84,7 @@ namespace QuanLiShopHoa
             List<Product> listProduct = ProductDAO.Instance.SearchProductByName(name);
 
             return listProduct;
-        }
+        }        
 
         #endregion
 
@@ -267,8 +267,13 @@ namespace QuanLiShopHoa
         {
             txbMua.Clear();
         }
+
         #endregion
-        
-        
+
+        private void btnTTNX_Click(object sender, EventArgs e)
+        {
+            formThongTinNhapXuat f = new formThongTinNhapXuat();
+            f.ShowDialog();
+        }
     }
 }

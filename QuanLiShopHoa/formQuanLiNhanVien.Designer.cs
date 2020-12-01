@@ -204,7 +204,6 @@
             this.dateTimeNgaySinh.CalendarTrailingForeColor = System.Drawing.Color.DimGray;
             this.dateTimeNgaySinh.Checked = false;
             this.dateTimeNgaySinh.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeNgaySinh.Location = new System.Drawing.Point(65, 271);
             this.dateTimeNgaySinh.Name = "dateTimeNgaySinh";
             this.dateTimeNgaySinh.Size = new System.Drawing.Size(354, 36);
