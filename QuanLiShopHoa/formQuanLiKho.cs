@@ -1,4 +1,5 @@
 ﻿using QuanLiShopHoa.DAO;
+using QuanLiShopHoa.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace QuanLiShopHoa
             dtgvProduct.DataSource = ProductList;
 
             LoadListProduct();
+            ClearBinding();
             AddProductBinding();
         }
 
@@ -127,6 +129,15 @@ namespace QuanLiShopHoa
             txbLoaiSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "loaiSanPham", true, DataSourceUpdateMode.Never));
             txbMua.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "mua", true, DataSourceUpdateMode.Never));
         }
+        void ClearBinding()
+        {
+            lbSPDangChon.DataBindings.Clear();
+            txbTenSanPham.DataBindings.Clear();
+            txbDonGia.DataBindings.Clear();
+            txbSoLuong.DataBindings.Clear();
+            txbLoaiSanPham.DataBindings.Clear();
+            txbMua.DataBindings.Clear();
+        }
 
         private void btnNhap_Click(object sender, EventArgs e)
         {
@@ -216,6 +227,43 @@ namespace QuanLiShopHoa
                 MessageBox.Show("Vui lòng kiểm tra");
             }
         
+        }
+
+        
+
+        private void iconTimSanPham_Click(object sender, EventArgs e)
+        {
+            dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
+            ClearBinding();
+            AddProductBinding();
+        }
+
+        List<Product> SearchProductName(string name)
+        {
+            List<Product> listProduct = ProductDAO.Instance.SearchProductByName(name);
+
+            return listProduct;
+        }
+
+        private void txbTimSanPham_TextChanged(object sender, EventArgs e)
+        {
+            if (txbTimSanPham.Text == "")
+            {
+                LoadListProduct();
+                ClearBinding();
+                AddProductBinding();
+            }
+            else
+            {
+                dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
+                ClearBinding();
+                AddProductBinding();
+            }
+        }
+
+        private void txbTimSanPham_DoubleClick(object sender, EventArgs e)
+        {
+            txbTimSanPham.Clear();
         }
 
         //sua co xiu thoi nha

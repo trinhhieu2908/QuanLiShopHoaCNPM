@@ -80,16 +80,21 @@ namespace QuanLiShopHoa.DAO
 
 
 
-        public int GetCheckedBillByMaSo(int maSo)
+        public List<Bill> SearchCheckedBillByMaSo(int maSo)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Bill where maSo = " + maSo + " and trangThai = 1");
+            List<Bill> list = new List<Bill>();
 
-            if (data.Rows.Count > 0)
+            string query = string.Format("select * from Bill where maSo like '%{0}%' and trangThai = 1 " , maSo);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
             {
-                Bill bill = new Bill(data.Rows[0]);
-                return bill.MaSo;
+                Bill Bill = new Bill(item);
+                list.Add(Bill);
             }
-            return -1;
+
+            return list;            
         }
 
         public void InsertBill()

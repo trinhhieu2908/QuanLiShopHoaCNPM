@@ -69,5 +69,22 @@ namespace QuanLiShopHoa.DAO
 
             return result > 0;
         }
+
+        public List<Product> SearchProductByName(string name)
+        {
+            List<Product> list = new List<Product>();
+
+            string query = string.Format("select * from Product where tenSanPham like N'%{0}%'" , name);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Product product = new Product(item);
+                list.Add(product);
+            }
+
+            return list;
+        }
     }
 }

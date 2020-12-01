@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formQuanLiDonHang));
             this.dtgvCheckedBill = new System.Windows.Forms.DataGridView();
             this.dateTimeHoaDon = new System.Windows.Forms.DateTimePicker();
@@ -46,19 +46,23 @@
             this.lbHDDangChon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnXem = new System.Windows.Forms.PictureBox();
+            this.iconTimDonHang = new FontAwesome.Sharp.IconPictureBox();
+            this.panelTimSanPham = new System.Windows.Forms.Panel();
+            this.txbTimDonHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCheckedBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTimDonHang)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvCheckedBill
             // 
             this.dtgvCheckedBill.AllowUserToAddRows = false;
             this.dtgvCheckedBill.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvCheckedBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvCheckedBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgvCheckedBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -67,36 +71,36 @@
             this.dtgvCheckedBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvCheckedBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvCheckedBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(17);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCheckedBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(17);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvCheckedBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dtgvCheckedBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvCheckedBill.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvCheckedBill.DefaultCellStyle = dataGridViewCellStyle15;
             this.dtgvCheckedBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.dtgvCheckedBill.Location = new System.Drawing.Point(68, 93);
             this.dtgvCheckedBill.Name = "dtgvCheckedBill";
             this.dtgvCheckedBill.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCheckedBill.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvCheckedBill.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dtgvCheckedBill.RowHeadersVisible = false;
             this.dtgvCheckedBill.RowHeadersWidth = 51;
             this.dtgvCheckedBill.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(114)))));
@@ -122,7 +126,7 @@
             this.dateTimeHoaDon.CalendarTrailingForeColor = System.Drawing.Color.DimGray;
             this.dateTimeHoaDon.Checked = false;
             this.dateTimeHoaDon.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeHoaDon.Location = new System.Drawing.Point(473, 28);
+            this.dateTimeHoaDon.Location = new System.Drawing.Point(469, 28);
             this.dateTimeHoaDon.Name = "dateTimeHoaDon";
             this.dateTimeHoaDon.Size = new System.Drawing.Size(363, 36);
             this.dateTimeHoaDon.TabIndex = 23;
@@ -244,12 +248,54 @@
             this.btnXem.TabStop = false;
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
+            // iconTimDonHang
+            // 
+            this.iconTimDonHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.iconTimDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconTimDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(245)))), ((int)(((byte)(91)))));
+            this.iconTimDonHang.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconTimDonHang.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(245)))), ((int)(((byte)(91)))));
+            this.iconTimDonHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconTimDonHang.IconSize = 34;
+            this.iconTimDonHang.Location = new System.Drawing.Point(378, 28);
+            this.iconTimDonHang.Name = "iconTimDonHang";
+            this.iconTimDonHang.Size = new System.Drawing.Size(34, 34);
+            this.iconTimDonHang.TabIndex = 47;
+            this.iconTimDonHang.TabStop = false;
+            this.iconTimDonHang.Click += new System.EventHandler(this.iconTimDonHang_Click);
+            // 
+            // panelTimSanPham
+            // 
+            this.panelTimSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(245)))), ((int)(((byte)(91)))));
+            this.panelTimSanPham.Location = new System.Drawing.Point(63, 66);
+            this.panelTimSanPham.Name = "panelTimSanPham";
+            this.panelTimSanPham.Size = new System.Drawing.Size(350, 1);
+            this.panelTimSanPham.TabIndex = 46;
+            // 
+            // txbTimDonHang
+            // 
+            this.txbTimDonHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txbTimDonHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTimDonHang.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTimDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(245)))), ((int)(((byte)(91)))));
+            this.txbTimDonHang.HideSelection = false;
+            this.txbTimDonHang.Location = new System.Drawing.Point(68, 28);
+            this.txbTimDonHang.Name = "txbTimDonHang";
+            this.txbTimDonHang.Size = new System.Drawing.Size(302, 34);
+            this.txbTimDonHang.TabIndex = 45;
+            this.txbTimDonHang.Text = "Tìm đơn hàng";
+            this.txbTimDonHang.Click += new System.EventHandler(this.txbTimDonHang_Click);
+            this.txbTimDonHang.TextChanged += new System.EventHandler(this.txbTimDonHang_TextChanged);
+            // 
             // formQuanLiDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1446, 888);
+            this.Controls.Add(this.iconTimDonHang);
+            this.Controls.Add(this.panelTimSanPham);
+            this.Controls.Add(this.txbTimDonHang);
             this.Controls.Add(this.btnXem);
             this.Controls.Add(this.lbHDDangChon);
             this.Controls.Add(this.label2);
@@ -263,6 +309,7 @@
             this.Text = "formQuanLiDonHang";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCheckedBill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTimDonHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +330,8 @@
         private System.Windows.Forms.Label lbHDDangChon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnXem;
+        private FontAwesome.Sharp.IconPictureBox iconTimDonHang;
+        private System.Windows.Forms.Panel panelTimSanPham;
+        private System.Windows.Forms.TextBox txbTimDonHang;
     }
 }

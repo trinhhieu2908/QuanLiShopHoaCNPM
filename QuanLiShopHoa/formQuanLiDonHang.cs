@@ -21,8 +21,7 @@ namespace QuanLiShopHoa
 
             dateTimeHoaDon.Value = DateTime.Now;
             LoadListCheckedBill(dateTimeHoaDon.Value);
-            lbHDDangChon.DataBindings.Clear();
-            txbTongTien.DataBindings.Clear();
+            ClearBinding();
             AddCheckedBillBinding();
         }
 
@@ -55,6 +54,12 @@ namespace QuanLiShopHoa
             txbTongTien.DataBindings.Add(new Binding("Text", dtgvCheckedBill.DataSource, "tongTien", true, DataSourceUpdateMode.Never, "","#,0.00"));
         }
 
+        void ClearBinding()
+        {
+            lbHDDangChon.DataBindings.Clear();
+            txbTongTien.DataBindings.Clear();
+        }
+
         private void btnXem_Click(object sender, EventArgs e)
         {
             ShowCheckedBill(Convert.ToInt32(lbHDDangChon.Text));
@@ -63,14 +68,48 @@ namespace QuanLiShopHoa
         private void dateTimeHoaDon_ValueChanged(object sender, EventArgs e)
         {
             LoadListCheckedBill(dateTimeHoaDon.Value);
-            lbHDDangChon.DataBindings.Clear();
-            txbTongTien.DataBindings.Clear();
+            ClearBinding();
             AddCheckedBillBinding();
         }
 
         private void lbHDDangChon_TextChanged(object sender, EventArgs e)
         {
             ShowCheckedBill(Convert.ToInt32(lbHDDangChon.Text));
+        }
+
+        List<Bill> SearchProductName(int maSo)
+        {
+            List<Bill> listBill = BillDAO.Instance.SearchCheckedBillByMaSo(maSo);
+
+            return listBill;
+        }
+
+        private void iconTimDonHang_Click(object sender, EventArgs e)
+        {
+            dtgvCheckedBill.DataSource = SearchProductName(Convert.ToInt32(txbTimDonHang.Text));
+            ClearBinding();
+            AddCheckedBillBinding();
+        }
+
+        private void txbTimDonHang_TextChanged(object sender, EventArgs e)
+        {
+            if (txbTimDonHang.Text == "")
+            {
+                LoadListCheckedBill(dateTimeHoaDon.Value);
+                ClearBinding();
+                AddCheckedBillBinding();
+            }
+            else
+            {
+                dtgvCheckedBill.DataSource = SearchProductName(Convert.ToInt32(txbTimDonHang.Text));
+                ClearBinding();
+                AddCheckedBillBinding();
+            }
+        }
+
+        private void txbTimDonHang_Click(object sender, EventArgs e)
+        {
+            txbTimDonHang.Clear();
         }
     }
 }

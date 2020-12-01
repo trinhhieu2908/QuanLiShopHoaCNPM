@@ -227,6 +227,44 @@ namespace QuanLiShopHoa
             txbTongTien.Text = totalPrice.ToString("c", culture);
         }
 
+        private void iconTimSanPham_Click(object sender, EventArgs e)
+        {
+            dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
+            lbSPDangChon.DataBindings.Clear();
+            AddProductBinding();
+        }
+        
+        List<Product> SearchProductName(string name)
+        {
+            List<Product> listProduct = ProductDAO.Instance.SearchProductByName(name);
+
+            return listProduct;
+        }
+
+        private void txbTimSanPham_TextChanged(object sender, EventArgs e)
+        {
+            if(txbTimSanPham.Text == "")
+            {
+                LoadListProduct();
+                lbSPDangChon.DataBindings.Clear();
+                AddProductBinding();
+            }
+            else
+            {
+                dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
+                lbSPDangChon.DataBindings.Clear();
+                AddProductBinding();
+            }
+            
+        }
+
+        private void txbTimSanPham_DoubleClick(object sender, EventArgs e)
+        {
+            txbTimSanPham.Clear();
+        }
+
+
+
         // alo alo
     }
 }
