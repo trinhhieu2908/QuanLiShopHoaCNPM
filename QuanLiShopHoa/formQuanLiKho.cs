@@ -27,6 +27,160 @@ namespace QuanLiShopHoa
             AddProductBinding();
         }
 
+        #region method
+        void LoadListProduct()
+        {
+            ProductList.DataSource = ProductDAO.Instance.GetListProduct();
+        }
+
+        void AddProductBinding()
+        {
+            lbSPDangChon.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "maSo", true, DataSourceUpdateMode.Never));
+            txbTenSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "tenSanPham", true, DataSourceUpdateMode.Never));
+            txbDonGia.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "donGia", true, DataSourceUpdateMode.Never));
+            txbSoLuong.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "soLuong", true, DataSourceUpdateMode.Never));
+            txbLoaiSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "loaiSanPham", true, DataSourceUpdateMode.Never));
+            txbMua.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "mua", true, DataSourceUpdateMode.Never));
+        }
+
+        void ClearBinding()
+        {
+            lbSPDangChon.DataBindings.Clear();
+            txbTenSanPham.DataBindings.Clear();
+            txbDonGia.DataBindings.Clear();
+            txbSoLuong.DataBindings.Clear();
+            txbLoaiSanPham.DataBindings.Clear();
+            txbMua.DataBindings.Clear();
+        }
+
+        void AddProduct(string tenSanPham, float donGia, string loaiSanPham, string mua)
+        {
+            if (ProductDAO.Instance.InsertProduct(tenSanPham, donGia, loaiSanPham, mua))
+            {
+                MessageBox.Show("Thêm sản phẩm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm sản phẩm thất bại!");
+            }
+            LoadListProduct();
+        }
+
+        void UpdateProduct(int maSo, string tenSanPham, float donGia, string loaiSanPham, string mua)
+        {
+            if (ProductDAO.Instance.UpdateProduct(maSo, tenSanPham, donGia, loaiSanPham, mua))
+            {
+                MessageBox.Show("Cập nhật sản phẩm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật sản phẩm thất bại!");
+            }
+            LoadListProduct();
+        }
+
+        List<Product> SearchProductName(string name)
+        {
+            List<Product> listProduct = ProductDAO.Instance.SearchProductByName(name);
+
+            return listProduct;
+        }
+
+        #endregion
+
+        #region events
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
+            int soLuong = (int)numericUpDownNhapXuat.Value;
+            string ghiChu = txbGhiChu.Text;
+
+            ProductDAO.Instance.ImportProduct(maSanPham, soLuong, ghiChu);
+            MessageBox.Show("Nhập hàng thành công!");
+
+            LoadListProduct();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
+            int soLuong = (int)numericUpDownNhapXuat.Value;
+            string ghiChu = txbGhiChu.Text;
+
+            if (ProductDAO.Instance.ExportProduct(maSanPham, soLuong, ghiChu))
+            {
+                MessageBox.Show("Xuất hàng thành công!");
+                LoadListProduct();
+            }
+            else
+            {
+                MessageBox.Show("Không được xuất số lượng hàng lớn hơn số lượng sản phẩm!");
+            }
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            string tenSanPham = txbTenSanPham.Text;
+            float donGia = Convert.ToInt32(txbDonGia.Text);
+            string loaiSanPham = txbLoaiSanPham.Text;
+            string mua = txbMua.Text;
+            try
+            {
+                AddProduct(tenSanPham, donGia, loaiSanPham, mua);
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại");
+            }
+        }
+
+        private void btnSuaSP_Click(object sender, EventArgs e)
+        {
+            int maSo = Convert.ToInt32(lbSPDangChon.Text);
+            string tenSanPham = txbTenSanPham.Text;
+            float donGia = Convert.ToInt32(txbDonGia.Text);
+            string loaiSanPham = txbLoaiSanPham.Text;
+            string mua = txbMua.Text;
+            try
+            {
+                UpdateProduct(maSo, tenSanPham, donGia, loaiSanPham, mua);
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng kiểm tra");
+            }
+
+        }
+
+        private void iconTimSanPham_Click(object sender, EventArgs e)
+        {
+            dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
+            ClearBinding();
+            AddProductBinding();
+        }
+
+        private void txbTimSanPham_TextChanged(object sender, EventArgs e)
+        {
+            if (txbTimSanPham.Text == "")
+            {
+                LoadListProduct();
+                ClearBinding();
+                AddProductBinding();
+            }
+            else
+            {
+                dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
+                ClearBinding();
+                AddProductBinding();
+            }
+        }
+
+        private void txbTimSanPham_DoubleClick(object sender, EventArgs e)
+        {
+            txbTimSanPham.Clear();
+        }
+
+        #endregion
 
         #region design
         private void btnThemSP_MouseHover(object sender, EventArgs e)
@@ -114,158 +268,7 @@ namespace QuanLiShopHoa
             txbMua.Clear();
         }
         #endregion
-
-        void LoadListProduct()
-        {
-            ProductList.DataSource = ProductDAO.Instance.GetListProduct();
-        }
-
-        void AddProductBinding()
-        {
-            lbSPDangChon.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "maSo", true, DataSourceUpdateMode.Never));
-            txbTenSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "tenSanPham", true, DataSourceUpdateMode.Never));
-            txbDonGia.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "donGia", true, DataSourceUpdateMode.Never));
-            txbSoLuong.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "soLuong", true, DataSourceUpdateMode.Never));
-            txbLoaiSanPham.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "loaiSanPham", true, DataSourceUpdateMode.Never));
-            txbMua.DataBindings.Add(new Binding("Text", dtgvProduct.DataSource, "mua", true, DataSourceUpdateMode.Never));
-        }
-        void ClearBinding()
-        {
-            lbSPDangChon.DataBindings.Clear();
-            txbTenSanPham.DataBindings.Clear();
-            txbDonGia.DataBindings.Clear();
-            txbSoLuong.DataBindings.Clear();
-            txbLoaiSanPham.DataBindings.Clear();
-            txbMua.DataBindings.Clear();
-        }
-
-        private void btnNhap_Click(object sender, EventArgs e)
-        {
-            int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
-            int soLuong = (int)numericUpDownNhapXuat.Value;
-            string ghiChu = txbGhiChu.Text;
-
-            ProductDAO.Instance.ImportProduct(maSanPham, soLuong, ghiChu);
-            MessageBox.Show("Nhập hàng thành công!");
-
-            LoadListProduct();
-        }
-
-
-        private void btnXuat_Click(object sender, EventArgs e)
-        {
-            int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
-            int soLuong = (int)numericUpDownNhapXuat.Value;
-            string ghiChu = txbGhiChu.Text;
-
-            if(ProductDAO.Instance.ExportProduct(maSanPham, soLuong, ghiChu))
-            {
-                MessageBox.Show("Xuất hàng thành công!");
-                LoadListProduct();
-            }
-            else
-            {
-                MessageBox.Show("Không được xuất số lượng hàng lớn hơn số lượng sản phẩm!");
-            }
-        }
-
-        void AddProduct(string tenSanPham, float donGia, string loaiSanPham, string mua)
-        {
-            if (ProductDAO.Instance.InsertProduct(tenSanPham, donGia, loaiSanPham, mua))
-            {
-                MessageBox.Show("Thêm sản phẩm thành công!");
-            }
-            else
-            {
-                MessageBox.Show("Thêm sản phẩm thất bại!");
-            }
-            LoadListProduct();
-        }
-
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            string tenSanPham = txbTenSanPham.Text;
-            float donGia = Convert.ToInt32(txbDonGia.Text);
-            string loaiSanPham = txbLoaiSanPham.Text;
-            string mua = txbMua.Text;
-            try
-            {
-                AddProduct(tenSanPham, donGia, loaiSanPham, mua);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng kiểm tra lại");
-            }
-        }
-
-        void UpdateProduct(int maSo, string tenSanPham, float donGia, string loaiSanPham, string mua)
-        {
-            if (ProductDAO.Instance.UpdateProduct(maSo, tenSanPham, donGia, loaiSanPham, mua))
-            {
-                MessageBox.Show("Cập nhật sản phẩm thành công!");
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật sản phẩm thất bại!");
-            }
-            LoadListProduct();
-        }
-
-        private void btnSuaSP_Click(object sender, EventArgs e)
-        {
-            int maSo = Convert.ToInt32(lbSPDangChon.Text);
-            string tenSanPham = txbTenSanPham.Text;
-            float donGia = Convert.ToInt32(txbDonGia.Text);
-            string loaiSanPham = txbLoaiSanPham.Text;
-            string mua = txbMua.Text;
-            try
-            {
-                UpdateProduct(maSo, tenSanPham, donGia, loaiSanPham, mua);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng kiểm tra");
-            }
         
-        }
-
         
-
-        private void iconTimSanPham_Click(object sender, EventArgs e)
-        {
-            dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
-            ClearBinding();
-            AddProductBinding();
-        }
-
-        List<Product> SearchProductName(string name)
-        {
-            List<Product> listProduct = ProductDAO.Instance.SearchProductByName(name);
-
-            return listProduct;
-        }
-
-        private void txbTimSanPham_TextChanged(object sender, EventArgs e)
-        {
-            if (txbTimSanPham.Text == "")
-            {
-                LoadListProduct();
-                ClearBinding();
-                AddProductBinding();
-            }
-            else
-            {
-                dtgvProduct.DataSource = SearchProductName(txbTimSanPham.Text);
-                ClearBinding();
-                AddProductBinding();
-            }
-        }
-
-        private void txbTimSanPham_DoubleClick(object sender, EventArgs e)
-        {
-            txbTimSanPham.Clear();
-        }
-
-        //sua co xiu thoi nha
     }
 }

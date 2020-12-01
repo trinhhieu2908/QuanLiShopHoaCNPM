@@ -31,7 +31,6 @@ namespace QuanLiShopHoa
 
         #region design
 
-
         //Struct
         private struct RGBColors
         {
@@ -73,7 +72,6 @@ namespace QuanLiShopHoa
             btnThemNV.Image = Properties.Resources.buttonThemNV;
         }
         #endregion
-
 
         #region events
 
@@ -393,10 +391,6 @@ namespace QuanLiShopHoa
             txbDiaChi.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "diaChi", true, DataSourceUpdateMode.Never));
             numericUpDownLoaiTaiKhoan.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "loaiTaiKhoan", true, DataSourceUpdateMode.Never));
         }
-
-
-
-
         #endregion
 
         
