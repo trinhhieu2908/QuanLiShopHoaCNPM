@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formQuanLiKho));
             this.dtgvProduct = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -570,6 +571,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formQuanLiKho";
             this.Text = "formQuanLiKho";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).EndInit();

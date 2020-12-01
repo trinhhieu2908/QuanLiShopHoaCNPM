@@ -211,6 +211,7 @@
             this.Controls.Add(this.dateTimeFrom);
             this.Controls.Add(this.dtgvHD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formQuanLiDoanhThu";
             this.Text = "formQuanLiDoanhThu";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).EndInit();

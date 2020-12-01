@@ -79,7 +79,6 @@
             this.btnQuanLiDoanhThu.FlatAppearance.BorderSize = 0;
             this.btnQuanLiDoanhThu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(83)))), ((int)(((byte)(224)))));
             this.btnQuanLiDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLiDoanhThu.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnQuanLiDoanhThu.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiDoanhThu.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnQuanLiDoanhThu.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
@@ -91,7 +90,6 @@
             this.btnQuanLiDoanhThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuanLiDoanhThu.Name = "btnQuanLiDoanhThu";
             this.btnQuanLiDoanhThu.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnQuanLiDoanhThu.Rotation = 0D;
             this.btnQuanLiDoanhThu.Size = new System.Drawing.Size(460, 90);
             this.btnQuanLiDoanhThu.TabIndex = 5;
             this.btnQuanLiDoanhThu.Text = "Quản lí doanh thu";
@@ -106,7 +104,6 @@
             this.btnQuanLiNhanVien.FlatAppearance.BorderSize = 0;
             this.btnQuanLiNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(83)))), ((int)(((byte)(224)))));
             this.btnQuanLiNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLiNhanVien.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnQuanLiNhanVien.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiNhanVien.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnQuanLiNhanVien.IconChar = FontAwesome.Sharp.IconChar.Users;
@@ -118,7 +115,6 @@
             this.btnQuanLiNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuanLiNhanVien.Name = "btnQuanLiNhanVien";
             this.btnQuanLiNhanVien.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnQuanLiNhanVien.Rotation = 0D;
             this.btnQuanLiNhanVien.Size = new System.Drawing.Size(460, 90);
             this.btnQuanLiNhanVien.TabIndex = 4;
             this.btnQuanLiNhanVien.Text = "Quản lí nhân viên";
@@ -133,7 +129,6 @@
             this.btnQuanLiKho.FlatAppearance.BorderSize = 0;
             this.btnQuanLiKho.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(83)))), ((int)(((byte)(224)))));
             this.btnQuanLiKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLiKho.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnQuanLiKho.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiKho.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnQuanLiKho.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
@@ -145,7 +140,6 @@
             this.btnQuanLiKho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuanLiKho.Name = "btnQuanLiKho";
             this.btnQuanLiKho.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnQuanLiKho.Rotation = 0D;
             this.btnQuanLiKho.Size = new System.Drawing.Size(460, 90);
             this.btnQuanLiKho.TabIndex = 3;
             this.btnQuanLiKho.Text = "Quản lí kho";
@@ -160,7 +154,6 @@
             this.btnQuanLiDonHang.FlatAppearance.BorderSize = 0;
             this.btnQuanLiDonHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(83)))), ((int)(((byte)(224)))));
             this.btnQuanLiDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLiDonHang.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnQuanLiDonHang.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiDonHang.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnQuanLiDonHang.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
@@ -172,7 +165,6 @@
             this.btnQuanLiDonHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuanLiDonHang.Name = "btnQuanLiDonHang";
             this.btnQuanLiDonHang.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnQuanLiDonHang.Rotation = 0D;
             this.btnQuanLiDonHang.Size = new System.Drawing.Size(460, 90);
             this.btnQuanLiDonHang.TabIndex = 2;
             this.btnQuanLiDonHang.Text = "Quản lí đơn hàng";
@@ -187,7 +179,6 @@
             this.btnTaoDonHang.FlatAppearance.BorderSize = 0;
             this.btnTaoDonHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(83)))), ((int)(((byte)(224)))));
             this.btnTaoDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoDonHang.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTaoDonHang.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoDonHang.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnTaoDonHang.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
@@ -199,7 +190,6 @@
             this.btnTaoDonHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaoDonHang.Name = "btnTaoDonHang";
             this.btnTaoDonHang.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnTaoDonHang.Rotation = 0D;
             this.btnTaoDonHang.Size = new System.Drawing.Size(460, 90);
             this.btnTaoDonHang.TabIndex = 1;
             this.btnTaoDonHang.Text = "Tạo đơn hàng";
@@ -252,7 +242,6 @@
             // 
             this.btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDangXuat.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
             this.btnDangXuat.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
@@ -262,7 +251,6 @@
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.Location = new System.Drawing.Point(1219, 54);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Rotation = 0D;
             this.btnDangXuat.Size = new System.Drawing.Size(221, 43);
             this.btnDangXuat.TabIndex = 6;
             this.btnDangXuat.Text = "Đăng xuất";
@@ -390,6 +378,7 @@
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formHomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -55,7 +55,7 @@
             this.txbTenDangNhap.Size = new System.Drawing.Size(382, 38);
             this.txbTenDangNhap.TabIndex = 1;
             this.txbTenDangNhap.Text = "Admin";
-            this.txbTenDangNhap.Click += new System.EventHandler(this.txbTenDangNhap_Click);            
+            this.txbTenDangNhap.Click += new System.EventHandler(this.txbTenDangNhap_Click);
             this.txbTenDangNhap.DoubleClick += new System.EventHandler(this.txbTenDangNhap_DoubleClick);
             // 
             // panel1
@@ -167,6 +167,7 @@
             this.Controls.Add(this.picMatKhau);
             this.Controls.Add(this.picTenDangNhap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

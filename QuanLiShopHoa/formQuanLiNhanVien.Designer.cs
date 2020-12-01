@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formQuanLiNhanVien));
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericUpDownLoaiTaiKhoan = new System.Windows.Forms.NumericUpDown();
@@ -462,6 +463,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvAccount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formQuanLiNhanVien";
             this.Text = "formQuanLiNhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
