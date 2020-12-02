@@ -30,17 +30,24 @@ namespace QuanLiShopHoa
         #region method
         void DeleteProduct(int maSo)
         {
-            if (ProductDAO.Instance.DeleteProduct(maSo))
+            try
             {
-                MessageBox.Show("Xóa sản phẩm thành công!");
+                if (ProductDAO.Instance.DeleteProduct(maSo))
+                {
+                    MessageBox.Show("Xóa sản phẩm thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa sản phẩm thất bại!");
+                }
+                LoadListProduct();
+                ClearBinding();
+                AddProductBinding();
             }
-            else
+            catch
             {
                 MessageBox.Show("Sản phẩm đã nằm trong hóa đơn nào đó nên không thể xóa");
             }
-            LoadListProduct();
-            ClearBinding();
-            AddProductBinding();
         }
 
         void LoadListProduct()

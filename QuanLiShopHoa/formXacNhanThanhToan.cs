@@ -25,8 +25,9 @@ namespace QuanLiShopHoa
             this.loginAccount = acc;
             this.currentBill = bill;
             this.totalPrice = totalPrice;
-
+                        
             LoadBill();
+            LoadListMenu();
         }
 
         void LoadBill()
@@ -35,6 +36,7 @@ namespace QuanLiShopHoa
             lbMaHoaDon.Text = currentBill.MaSo.ToString();
             CultureInfo culture = new CultureInfo("vi-Vn");
             lbTongTien.Text = totalPrice.ToString("c", culture);
+            lbNgayThanhToan.Text = currentBill.NgayThanhToan.ToString();
         }
 
         void MakePayment(int maSo, float tongTien, string tenKH, string soDienThoaiKH, string nVThanhToan, string ghiChu)
@@ -65,6 +67,11 @@ namespace QuanLiShopHoa
             string ghiChu = txbGhiChu.Text;
 
             MakePayment(maSo, tongTien, tenKH, soDienThoaiKH, nVThanhToan, ghiChu);
+        }
+
+        void LoadListMenu()
+        {
+            dtgvMenu.DataSource = MenuBillInfoDAO.Instance.GetListMenuByBill(Convert.ToInt32(lbMaHoaDon.Text));
         }
     }
 }

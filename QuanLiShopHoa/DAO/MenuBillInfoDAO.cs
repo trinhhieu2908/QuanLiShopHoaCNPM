@@ -21,7 +21,7 @@ namespace QuanLiShopHoa.DAO
 
         private MenuBillInfoDAO() { }
 
-        public List<MenuBillInfo> GetListMenuByUncheckedBill(int maSo)
+        public List<MenuBillInfo> GetListMenuByBill(int maSo)
         {
             List<MenuBillInfo> listMenu = new List<MenuBillInfo>();
 
@@ -36,5 +36,6 @@ namespace QuanLiShopHoa.DAO
 
             return listMenu;
         }
+
     }
 }

@@ -50,7 +50,7 @@ namespace QuanLiShopHoa
         void ShowCheckedBill(int maSo)
         {
             listViewSP.Items.Clear();
-            List<MenuBillInfo> listBillInfo = MenuBillInfoDAO.Instance.GetListMenuByUncheckedBill(maSo);
+            List<MenuBillInfo> listBillInfo = MenuBillInfoDAO.Instance.GetListMenuByBill(maSo);
             float tongTien = 0;
             foreach (MenuBillInfo item in listBillInfo)
             {
