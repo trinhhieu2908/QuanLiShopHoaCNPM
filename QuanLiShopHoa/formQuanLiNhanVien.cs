@@ -79,7 +79,19 @@ namespace QuanLiShopHoa
         {            
             string tenDangNhap = txbTenDangNhap.Text;
 
-            DeleteAccount(tenDangNhap);
+            string message = "Xác nhận xóa tài khoản";
+            string title = "Confirm Delete";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                DeleteAccount(tenDangNhap);
+            }
+            else
+            {
+                //Do nothing
+            }
+            
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
