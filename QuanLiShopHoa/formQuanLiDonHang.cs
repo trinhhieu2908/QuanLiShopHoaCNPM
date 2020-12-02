@@ -15,14 +15,31 @@ namespace QuanLiShopHoa
 {
     public partial class formQuanLiDonHang : Form
     {
-        public formQuanLiDonHang()
+        public Account loginAccount;
+        public formQuanLiDonHang(Account acc)
         {
             InitializeComponent();
+
+            this.loginAccount = acc;
+
+            ChangeAccount(acc.LoaiTaiKhoan);
 
             dateTimeHoaDon.Value = DateTime.Now;
             LoadListCheckedBill(dateTimeHoaDon.Value);
             ClearBinding();
             AddCheckedBillBinding();
+        }
+
+        void ChangeAccount(int loaiTaiKhoan)
+        {
+            if (loaiTaiKhoan == 0 || loaiTaiKhoan == 1)
+            {
+                btnXoa.Enabled = true;
+            }            
+            else
+            {
+                btnXoa.Enabled = false;
+            }            
         }
 
         void LoadListCheckedBill(DateTime Day)
@@ -58,12 +75,7 @@ namespace QuanLiShopHoa
         {
             lbHDDangChon.DataBindings.Clear();
             txbTongTien.DataBindings.Clear();
-        }
-
-        private void btnXem_Click(object sender, EventArgs e)
-        {
-            ShowCheckedBill(Convert.ToInt32(lbHDDangChon.Text));
-        }
+        }        
 
         private void dateTimeHoaDon_ValueChanged(object sender, EventArgs e)
         {
@@ -110,6 +122,33 @@ namespace QuanLiShopHoa
         private void txbTimDonHang_Click(object sender, EventArgs e)
         {
             txbTimDonHang.Clear();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int maSo = Convert.ToInt32(lbHDDangChon.Text);
+
+            DeleteBill(maSo);
+        }
+
+        void DeleteBill(int maSo)
+        {
+            List<BillInfo> listBillInfo = BillInfoDAO.Instance.GetListBillInfo(maSo);
+
+            foreach (BillInfo item in listBillInfo)
+            {
+                BillInfoDAO.Instance.DeleteBillInfo(item.MaHoaDon, item.MaSanPham, item.SoLuong);
+            }
+
+            if (BillInfoDAO.Instance.DeleteBill(maSo))
+            {
+                MessageBox.Show("Xóa hóa đơn thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Xóa hóa đơn thất bại!");
+            }
+            LoadListCheckedBill(dateTimeHoaDon.Value);
         }
     }
 }

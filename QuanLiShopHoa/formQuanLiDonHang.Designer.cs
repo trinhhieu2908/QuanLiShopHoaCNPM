@@ -45,12 +45,12 @@
             this.txbTongTien = new System.Windows.Forms.TextBox();
             this.lbHDDangChon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnXem = new System.Windows.Forms.PictureBox();
+            this.btnXoa = new System.Windows.Forms.PictureBox();
             this.iconTimDonHang = new FontAwesome.Sharp.IconPictureBox();
             this.panelTimSanPham = new System.Windows.Forms.Panel();
             this.txbTimDonHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCheckedBill)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconTimDonHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,18 +235,18 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "Đơn hàng đang chọn:";
             // 
-            // btnXem
+            // btnXoa
             // 
-            this.btnXem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
-            this.btnXem.Location = new System.Drawing.Point(825, 813);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(159, 47);
-            this.btnXem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnXem.TabIndex = 44;
-            this.btnXem.TabStop = false;
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(825, 813);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(159, 47);
+            this.btnXoa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnXoa.TabIndex = 44;
+            this.btnXoa.TabStop = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // iconTimDonHang
             // 
@@ -296,7 +296,7 @@
             this.Controls.Add(this.iconTimDonHang);
             this.Controls.Add(this.panelTimSanPham);
             this.Controls.Add(this.txbTimDonHang);
-            this.Controls.Add(this.btnXem);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.lbHDDangChon);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -309,7 +309,7 @@
             this.Name = "formQuanLiDonHang";
             this.Text = "formQuanLiDonHang";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCheckedBill)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconTimDonHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -330,7 +330,7 @@
         private System.Windows.Forms.TextBox txbTongTien;
         private System.Windows.Forms.Label lbHDDangChon;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox btnXem;
+        private System.Windows.Forms.PictureBox btnXoa;
         private FontAwesome.Sharp.IconPictureBox iconTimDonHang;
         private System.Windows.Forms.Panel panelTimSanPham;
         private System.Windows.Forms.TextBox txbTimDonHang;

@@ -186,7 +186,8 @@ namespace QuanLiShopHoa
         private void btnQuanLiDonHang_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color2);
-            openChildForm(new formQuanLiDonHang());
+            formQuanLiDonHang f = new formQuanLiDonHang(loginAccount);            
+            openChildForm(f);
             panelShadow.BackColor = RGBColors.color2;
         }
 
