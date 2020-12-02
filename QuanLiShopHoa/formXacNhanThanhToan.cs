@@ -1,4 +1,6 @@
-﻿using QuanLiShopHoa.DAO;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using QuanLiShopHoa.DAO;
 using QuanLiShopHoa.DTO;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +29,7 @@ namespace QuanLiShopHoa
             this.currentBill = bill;
             this.totalPrice = totalPrice;
                         
-            LoadBill();
-            LoadListMenu();
+            LoadBill();            
         }
 
         void LoadBill()
@@ -67,11 +69,38 @@ namespace QuanLiShopHoa
             string ghiChu = txbGhiChu.Text;
 
             MakePayment(maSo, tongTien, tenKH, soDienThoaiKH, nVThanhToan, ghiChu);
-        }
+        }        
 
-        void LoadListMenu()
+        List<MenuBillInfo> GetListMenu()
         {
-            dtgvMenu.DataSource = MenuBillInfoDAO.Instance.GetListMenuByBill(Convert.ToInt32(lbMaHoaDon.Text));
+            List<MenuBillInfo> listMenu = MenuBillInfoDAO.Instance.GetListMenuByBill(Convert.ToInt32(lbMaHoaDon.Text));
+
+            return listMenu;
+        }
+        
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            using(SaveFileDialog sfd = new SaveFileDialog() { Filter ="PDF file|*.pdf",ValidateNames = true })
+            {
+                if(sfd.ShowDialog()== DialogResult.OK)
+                {
+                    iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4.Rotate());
+                    try
+                    {
+                        PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                        doc.Open();
+                        doc.Add(new iTextSharp.text.Paragraph(lbNVThanhToan.Text));
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Khong the");
+                    }
+                    finally
+                    {
+                        doc.Close();
+                    }
+                }
+            }
         }
     }
 }
