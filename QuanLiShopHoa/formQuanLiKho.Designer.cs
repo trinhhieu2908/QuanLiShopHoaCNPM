@@ -482,6 +482,7 @@
             this.btnXoaSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnXoaSP.TabIndex = 27;
             this.btnXoaSP.TabStop = false;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
             this.btnXoaSP.MouseLeave += new System.EventHandler(this.btnXoaSP_MouseLeave);
             this.btnXoaSP.MouseHover += new System.EventHandler(this.btnXoaSP_MouseHover);
             // 

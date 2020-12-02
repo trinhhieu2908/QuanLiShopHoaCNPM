@@ -154,5 +154,14 @@ namespace QuanLiShopHoa.DAO
 
             return list;
         }
+
+        public bool DeleteProduct(int maSo)
+        {
+            string query = string.Format("delete Product where maSo = {0}", maSo);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

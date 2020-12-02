@@ -28,6 +28,21 @@ namespace QuanLiShopHoa
         }
 
         #region method
+        void DeleteProduct(int maSo)
+        {
+            if (ProductDAO.Instance.DeleteProduct(maSo))
+            {
+                MessageBox.Show("Xóa sản phẩm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Sản phẩm đã nằm trong hóa đơn nào đó nên không thể xóa");
+            }
+            LoadListProduct();
+            ClearBinding();
+            AddProductBinding();
+        }
+
         void LoadListProduct()
         {
             ProductList.DataSource = ProductDAO.Instance.GetListProduct();
@@ -84,11 +99,35 @@ namespace QuanLiShopHoa
             List<Product> listProduct = ProductDAO.Instance.SearchProductByName(name);
 
             return listProduct;
-        }        
+        }
 
         #endregion
 
         #region events
+        private void btnTTNX_Click(object sender, EventArgs e)
+        {
+            formThongTinNhapXuat f = new formThongTinNhapXuat();
+            f.ShowDialog();
+        }
+
+        private void btnXoaSP_Click(object sender, EventArgs e)
+        {
+            int maSo = Convert.ToInt32(lbSPDangChon.Text);
+
+            string message = "Xác nhận xóa sản phẩm";
+            string title = "Confirm Delete";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                DeleteProduct(maSo);
+            }
+            else
+            {
+                //Do nothing
+            }
+        }
+
         private void btnNhap_Click(object sender, EventArgs e)
         {
             int maSanPham = Convert.ToInt32(lbSPDangChon.Text);
@@ -268,12 +307,8 @@ namespace QuanLiShopHoa
             txbMua.Clear();
         }
 
-        #endregion
+        #endregion       
 
-        private void btnTTNX_Click(object sender, EventArgs e)
-        {
-            formThongTinNhapXuat f = new formThongTinNhapXuat();
-            f.ShowDialog();
-        }
+        
     }
 }
