@@ -127,8 +127,19 @@ namespace QuanLiShopHoa
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int maSo = Convert.ToInt32(lbHDDangChon.Text);
-
-            DeleteBill(maSo);
+            string message = "Xác nhận xóa hóa đơn";
+            string title = "Confirm Delete";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                DeleteBill(maSo);
+            }
+            else
+            {
+                //Do nothing
+            }
+            
         }
 
         void DeleteBill(int maSo)
