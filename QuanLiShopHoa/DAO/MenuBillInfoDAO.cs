@@ -37,5 +37,13 @@ namespace QuanLiShopHoa.DAO
             return listMenu;
         }
 
+        public DataTable GetMenuToPrint(int maSo)
+        {
+            string query = "select p.tenSanPham, bi.soLuong, p.donGia, p.donGia*bi.soLuong as [thanhTien] from BillInfo as bi, Bill as b, Product as p where bi.maHoaDon = b.maSo and bi.maSanPham = p.maSo and b.maSo = " + maSo;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
+        }
+
     }
 }
